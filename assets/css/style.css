@@ -66,40 +66,6 @@
 #login .form h2 {
   font-weight: 700;
 }
-#login .form .form-group {
-  margin-top: 20px;
-}
-#login .form input {
-  height: 55px;
-  border: 1px solid #dadce0;
-  border-radius: 5px;
-  padding: 12px 12px 0 12px !important;
-  display: block;
-  transition: all 0.2s ease;
-}
-#login .form .form-group {
-  position: relative;
-}
-#login .form label {
-  position: absolute;
-  margin-left: 11px;
-  color: #aaa;
-  top: 16px;
-  transition: all 0.2s ease;
-  cursor: text;
-}
-#login .form input:focus,
-#login .form input:valid {
-  box-shadow: 0 0 0 0;
-  outline: 0;
-  border: 2px solid var(--primary);
-}
-#login .form input:focus + label,
-#login .form input:valid + label {
-  top: 5px;
-  color: var(--primary);
-  font-size: 12px;
-}
 #login .form button {
   background: var(--primary);
   color: #fff;
@@ -155,13 +121,31 @@
   outline: 0;
   font-size: 13px;
 }
+.sign-modal button.btn-sign-in,
 #forget .content button {
   background-color: var(--primary);
   border: 1px solid var(--primary);
   color: #fff;
+}
+#forget .content button {
   padding: 6px 16px;
 }
+.sign-modal button.btn-sign-in:hover,
 #forget .content button:hover {
   background-color: var(--secondary);
   border: 1px solid var(--secondary);
+}
+/*----------------------*/
+/*----- SIGN MODAL -----*/
+/*----------------------*/
+.sign-modal .modal-content .modal-header {
+  border: none;
+  padding: 0 15px;
+  height: 53px;
+}
+.sign-modal .modal-content small {
+  font-size: 16px;
+}
+.sign-modal .modal-content small a {
+  color: var(--primary);
 }

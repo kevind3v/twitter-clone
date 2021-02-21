@@ -25,9 +25,6 @@ body {
   overflow-x: hidden;
   background: #fff;
 }
-a {
-  text-decoration: none !important;
-}
 .btn {
   display: block;
   border-radius: 100px;
@@ -37,6 +34,43 @@ a {
   font-weight: bold;
   box-sizing: border-box;
   line-height: 20px;
+}
+/*------------------------*/
+/*------ FORM ------*/
+/*------------------------*/
+.form .form-group {
+  margin-top: 20px;
+}
+.form input {
+  height: 55px;
+  border: 1px solid #dadce0;
+  border-radius: 5px;
+  padding: 12px 12px 0 12px !important;
+  display: block;
+  transition: all 0.2s ease;
+}
+.form .form-group {
+  position: relative;
+}
+.form label {
+  position: absolute;
+  margin-left: 11px;
+  color: #aaa;
+  top: 16px;
+  transition: all 0.2s ease;
+  cursor: text;
+}
+.form input:focus,
+.form input:valid {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+  border: 2px solid var(--primary);
+}
+.form input:focus + label,
+.form input:valid + label {
+  top: 5px;
+  color: var(--primary);
+  font-size: 12px;
 }
 /*------------------------*/
 /*------ RESPONSIVE ------*/
