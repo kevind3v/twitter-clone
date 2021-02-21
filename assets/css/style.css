@@ -111,3 +111,57 @@
 #login .form .link-login:hover {
   text-decoration: underline !important;
 }
+/*------------------*/
+/*----- FORGET -----*/
+/*------------------*/
+.header {
+  min-height: 40px;
+  box-shadow: 0 0 3px #aaa;
+}
+.header nav {
+  height: 40px;
+  max-width: 590px;
+  padding: 0;
+}
+.header nav .navbar-brand {
+  font-size: 17px;
+  color: #858585;
+  padding: 0;
+  padding-left: 5px;
+}
+.header nav .navbar-brand:hover {
+  color: #858585;
+}
+#forget .content {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: white;
+  max-width: 590px;
+  margin: 10px auto 20px;
+}
+#forget .content h3 {
+  font-weight: 700;
+  font-family: Helvetica, 'Roboto', sans-serif;
+  margin-bottom: 36px;
+}
+#forget .content p {
+  font-size: 14px;
+}
+#forget .content input {
+  border-radius: 100px;
+  width: 300px;
+  line-height: 20px;
+  border: 1px solid #ccd6dd;
+  outline: 0;
+  font-size: 13px;
+}
+#forget .content button {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  color: #fff;
+  padding: 6px 16px;
+}
+#forget .content button:hover {
+  background-color: var(--secondary);
+  border: 1px solid var(--secondary);
+}

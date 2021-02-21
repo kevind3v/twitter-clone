@@ -7,8 +7,8 @@
 /*------------------*/
 :root {
   --primary: #1da1f2;
-  --secondary:#1B93E0
-  --dark: #151F2A;
+  --secondary: #006dbf;
+  --dark: #151f2a;
   --font-family: 'Roboto', sans-serif;
 }
 * {
@@ -16,7 +16,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-html, body{
+html,
+body {
   height: 100%;
 }
 body {
@@ -24,10 +25,10 @@ body {
   overflow-x: hidden;
   background: #fff;
 }
-a{
-  text-decoration: none!important;
+a {
+  text-decoration: none !important;
 }
-.btn{
+.btn {
   display: block;
   border-radius: 100px;
   border: 1px solid #1da1f2;
