@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter. É o que está acontecendo / Twitter</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="../shared/styles/boot.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+  </head>
+  <body>
+    <main id="login" class="container mt-4">
+      <div class="form m-auto px-md-4">
+        <i class="fab fa-twitter mb-4"></i>
+        <h2>Entrar no Twitter</h2>
+        <form action="#" method="POST">
+          <div class="form-group">
+            <input required id="user" class="form-control" type="text" />
+            <label for="user">Telefone, e-mail ou nome de usuário</label>
+          </div>
+          <div class="form-group">
+            <input required id="passwd" class="form-control" type="password" />
+            <label for="passwd">Senha</label>
+          </div>
+          <button class="btn btn-block" type="submit">Conecte-se</button>
+          <div class="row justify-content-center mt-3">
+            <a class="link-login mr-3" href="#">Esqueceu a senha?</a>
+            <a class="link-login" href="#">Cadastre-se no Twitter</a>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- JS -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

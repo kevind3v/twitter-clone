@@ -1,58 +1,113 @@
 /*-----------------*/
-/*----- LOGIN -----*/
+/*----- INDEX -----*/
 /*-----------------*/
-#login {
+#main {
   width: 100% !important;
   height: 100% !important;
 }
-#login main {
+#main main {
   height: 100%;
   max-height: 100%;
 }
-#login main .banner {
+#main main .banner {
   width: 100%;
-  background: url('../img/bg-log-in.png') #1da1f2;
+  background: url('../img/bg-log-in.png') var(--primary);
   background-repeat: no-repeat;
   background-size: cover;
 }
-#login main .brand {
+#main main .brand {
   padding: 30px;
   height: 280px;
   max-width: 380px;
 }
-#login main .middle i {
-  color: #1da1f2;
+#main main .middle i,
+#login .form i {
+  color: var(--primary);
   font-size: 50px;
   margin-bottom: 50px;
 }
-#login main .middle h1 {
+#main main .middle h1 {
   font-size: 3.5em;
   line-height: 45px;
   margin-bottom: 40px;
   font-weight: 800;
 }
-#login main .middle h4 {
+#main main .middle h4 {
   font-size: 2em;
   line-height: 35px;
   margin-bottom: 20px;
   font-weight: 700;
 }
-#login main .middle .btn-sign-up {
-  background-color: #1da1f2;
+#main main .middle .btn-sign-up {
+  background-color: var(--primary);
   color: #fff;
 }
-#login main .middle .btn-login {
+#main main .middle .btn-login {
   margin-top: 20px;
   background-color: #fff;
-  border: 1px solid #1da1f2;
-  color: #1da1f2;
+  border: 1px solid var(--primary);
+  color: var(--primary);
 }
 
-#login footer .nav-link {
+#main footer .nav-link {
   padding: 5px 15px;
   color: #aab8c2;
   font-size: 12px;
 }
-#login footer a.nav-link:hover {
+#main footer a.nav-link:hover {
+  text-decoration: underline !important;
+}
+/*-----------------*/
+/*----- LOGIN -----*/
+/*-----------------*/
+#login .form {
+  max-width: 400px;
+}
+#login .form h2 {
+  font-weight: 700;
+}
+#login .form .form-group {
+  margin-top: 20px;
+}
+#login .form input {
+  height: 55px;
+  border: 1px solid #dadce0;
+  border-radius: 5px;
+  padding: 12px 12px 0 12px !important;
+  display: block;
+  transition: all 0.2s ease;
+}
+#login .form .form-group {
+  position: relative;
+}
+#login .form label {
+  position: absolute;
+  margin-left: 11px;
+  color: #aaa;
+  top: 16px;
+  transition: all 0.2s ease;
+  cursor: text;
+}
+#login .form input:focus,
+#login .form input:valid {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+  border: 2px solid var(--primary);
+}
+#login .form input:focus + label,
+#login .form input:valid + label {
+  top: 5px;
+  color: var(--primary);
+  font-size: 12px;
+}
+#login .form button {
+  background: var(--primary);
+  color: #fff;
+}
+#login .form .link-login {
+  color: var(--primary);
+  font-size: 16px;
+}
+#login .form .link-login:hover {
   text-decoration: underline !important;
 }

@@ -1,12 +1,12 @@
 @media (max-width: 992px) {
-  #login main .brand {
+  #main main .brand {
     padding: 45px;
     height: 220px;
   }
 }
 @media (min-width: 992px) {
-  #login main .middle .btn-login,
-  #login main .middle .btn-sign-up {
+  #main main .middle .btn-login,
+  #main main .middle .btn-sign-up {
     width: 70%;
   }
 }
