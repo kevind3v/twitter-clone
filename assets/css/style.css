@@ -1,0 +1,58 @@
+/*-----------------*/
+/*----- LOGIN -----*/
+/*-----------------*/
+#login {
+  width: 100% !important;
+  height: 100% !important;
+}
+#login main {
+  height: 100%;
+  max-height: 100%;
+}
+#login main .banner {
+  width: 100%;
+  background: url('../img/bg-log-in.png') #1da1f2;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#login main .brand {
+  padding: 30px;
+  height: 280px;
+  max-width: 380px;
+}
+#login main .middle i {
+  color: #1da1f2;
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+#login main .middle h1 {
+  font-size: 3.5em;
+  line-height: 45px;
+  margin-bottom: 40px;
+  font-weight: 800;
+}
+#login main .middle h4 {
+  font-size: 2em;
+  line-height: 35px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+#login main .middle .btn-sign-up {
+  background-color: #1da1f2;
+  color: #fff;
+}
+#login main .middle .btn-login {
+  margin-top: 20px;
+  background-color: #fff;
+  border: 1px solid #1da1f2;
+  color: #1da1f2;
+}
+
+#login footer .nav-link {
+  padding: 5px 15px;
+  color: #aab8c2;
+  font-size: 12px;
+}
+#login footer a.nav-link:hover {
+  text-decoration: underline !important;
+}
