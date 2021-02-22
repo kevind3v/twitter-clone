@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter. É o que está acontecendo / Twitter</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../node_modules/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link rel="stylesheet" href="../../shared/styles/boot.css" />
+    <link rel="stylesheet" href="../../assets/css/app/style.css" />
+    <link rel="stylesheet" href="../../assets/css/app/responsive.css" />
+  </head>
+  <body>
+    <main id="feed" class="container p-0">
+      <div class="row wrapper justify-content-center">
+        <div class="menubar">a</div>
+        <section class="content d-flex flex-column">
+          <article class="header d-flex">
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+            </button>
+            <div class="profile-info d-flex flex-column">
+              <strong>Kevin Siqueira</strong>
+              <span>625 Tweets</span>
+            </div>
+          </article>
+
+          <article class="profile-page">
+            <div class="banner">
+              <div class="avatar"></div>
+            </div>
+            <div class="profile-data">
+              <button class="edit-profile" outlined>Editar Perfil</button>
+
+              <h1>Kevin Siqueira</h1>
+              <h2>@kevind3v</h2>
+
+              <p>Developer</p>
+
+              <ul>
+                <li>
+                  <span class="material-icons-outlined"> location_on </span>
+                  Itaquaquecetuba, São Paulo - Brasil
+                </li>
+                <li>
+                  <span class="material-icons-outlined"> cake </span>
+                  Nascido(a) em 14 de maio de 2002
+                </li>
+              </ul>
+
+              <div class="followage">
+                <span>segundo <strong>94</strong></span>
+                <span><strong>194</strong> seguidores</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="bottom-menu d-flex justify-content-between">
+            <span class="material-icons-outlined active">home</span>
+            <span class="material-icons-outlined">search</span>
+            <span class="material-icons-outlined"> notifications_none </span>
+            <span class="material-icons-outlined"> email </span>
+          </article>
+        </section>
+        <div class="sidebar"></div>
+      </div>
+    </main>
+
+    <!-- JS -->
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

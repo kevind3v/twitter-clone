@@ -1,0 +1,9 @@
+@media (min-width: 500px) {
+  main#feed .content {
+    border-left: 1px solid var(--outline);
+    border-right: 1px solid var(--outline);
+  }
+  main#feed .bottom-menu {
+    display: none !important;
+  }
+}

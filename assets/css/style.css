@@ -4,6 +4,7 @@
 #main {
   width: 100% !important;
   height: 100% !important;
+  background: var(--primary) !important;
 }
 #main main {
   height: 100%;
@@ -22,33 +23,36 @@
 }
 #main main .middle i,
 #login .form i {
-  color: var(--primary);
+  color: var(--white);
   font-size: 50px;
   margin-bottom: 50px;
 }
 #main main .middle h1 {
-  font-size: 3.5em;
   line-height: 45px;
   margin-bottom: 40px;
   font-weight: 800;
 }
 #main main .middle h4 {
-  font-size: 2em;
   line-height: 35px;
   margin-bottom: 20px;
   font-weight: 700;
 }
 #main main .middle .btn-sign-up {
-  background-color: var(--primary);
+  background-color: var(--twitter);
   color: #fff;
 }
 #main main .middle .btn-login {
   margin-top: 20px;
-  background-color: #fff;
-  border: 1px solid var(--primary);
-  color: var(--primary);
+  background-color: transparent;
+  border: 1px solid var(--twitter);
+  color: var(--twitter);
 }
-
+#main main .middle .btn-sign-up:hover {
+  background-color: var(--twitter-light-hover);
+}
+#main main .middle .btn-login:hover {
+  background-color: var(--twitter-light-hover-rgba);
+}
 #main footer .nav-link {
   padding: 5px 15px;
   color: #aab8c2;
@@ -63,16 +67,27 @@
 #login .form {
   max-width: 400px;
 }
-#login .form h2 {
+#login .form i {
+  font-size: 35px;
+  margin-bottom: 35px;
+}
+#login .form h3 {
   font-weight: 700;
 }
 #login .form button {
-  background: var(--primary);
+  background: var(--twitter);
   color: #fff;
 }
+#login .form button:disabled {
+  opacity: 0.5;
+}
+#login .form button:hover {
+  background-color: var(--twitter-light-hover);
+}
 #login .form .link-login {
-  color: var(--primary);
-  font-size: 16px;
+  color: var(--twitter);
+  margin-top: 15px;
+  font-size: 14px;
 }
 #login .form .link-login:hover {
   text-decoration: underline !important;
@@ -90,7 +105,7 @@
   padding: 0;
 }
 .header nav .navbar-brand {
-  font-size: 17px;
+  font-size: 16px;
   color: #858585;
   padding: 0;
   padding-left: 5px;
@@ -107,7 +122,6 @@
 }
 #forget .content h3 {
   font-weight: 700;
-  font-family: Helvetica, 'Roboto', sans-serif;
   margin-bottom: 36px;
 }
 #forget .content p {
@@ -123,8 +137,8 @@
 }
 .sign-modal button.btn-sign-in,
 #forget .content button {
-  background-color: var(--primary);
-  border: 1px solid var(--primary);
+  background-color: var(--twitter);
+  border: 1px solid var(--twitter);
   color: #fff;
 }
 #forget .content button {
@@ -132,20 +146,29 @@
 }
 .sign-modal button.btn-sign-in:hover,
 #forget .content button:hover {
-  background-color: var(--secondary);
-  border: 1px solid var(--secondary);
+  background-color: var(--twitter-light-hover);
+  border: 1px solid var(--twitter-light-hover);
 }
 /*----------------------*/
 /*----- SIGN MODAL -----*/
 /*----------------------*/
+.modal {
+  background-color: var(--twitter-modal);
+}
+.sign-modal .modal-content {
+  background: var(--primary);
+}
 .sign-modal .modal-content .modal-header {
   border: none;
   padding: 0 15px;
   height: 53px;
 }
+.sign-modal .modal-content h4 {
+  font-weight: 700;
+}
 .sign-modal .modal-content small {
   font-size: 16px;
 }
 .sign-modal .modal-content small a {
-  color: var(--primary);
+  color: var(--twitter);
 }

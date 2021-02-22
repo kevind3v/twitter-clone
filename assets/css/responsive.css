@@ -17,6 +17,9 @@
     max-width: 80vw;
     border-radius: 16px;
   }
+  #main main .middle h1 {
+    font-size: 3em;
+  }
 }
 @media (max-width: 992px) {
   #main main .brand {
