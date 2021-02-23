@@ -2,6 +2,7 @@
 /*----- FONTS -----*/
 /*-----------------*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
 /*------------------*/
 /*----- GLOBAL -----*/
 /*------------------*/
@@ -19,8 +20,8 @@
   --twitter-light-hover: #2c8ed6;
   --twitter-light-hover-rgba: rgba(44, 142, 214, 0.1);
   --twitter-modal: rgba(91, 112, 131, 0.4);
-  --font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, 'Open Sans',
-    Arial, sans-serif;
+  --font-family: Roboto, 'Nunito', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Ubuntu,
+    'Open Sans', Arial, sans-serif;
 }
 * {
   margin: 0;
@@ -47,6 +48,18 @@ input {
 body {
   overflow-x: hidden;
   background: #fff;
+}
+::-webkit-scrollbar-track {
+  background-color: #f4f4f4;
+  border-radius: 50px;
+}
+::-webkit-scrollbar {
+  width: 7px;
+  border-radius: 500px;
+}
+::-webkit-scrollbar-thumb {
+  background: #dad7d7;
+  border-radius: 50px;
 }
 .btn {
   display: block;

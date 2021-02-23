@@ -16,10 +16,10 @@
     <link rel="stylesheet" href="../../assets/css/app/profile.css" />
     <link rel="stylesheet" href="../../assets/css/app/feed.css" />
     <link rel="stylesheet" href="../../assets/css/app/menubar.css" />
-    <link rel="stylesheet" href="../../assets/css/app/responsive.css" />
+    <link rel="stylesheet" href="../../assets/css/app/sidebar.css" />
   </head>
   <body>
-    <main id="feed" class="container p-0">
+    <main id="feed" class="container-fluid">
       <div class="d-flex wrapper justify-content-center">
         <section class="menubar">
           <div class="topside d-flex flex-column align-items-center">
@@ -49,6 +49,16 @@
             <button class="btn">
               <span>Tweetar</span>
             </button>
+          </div>
+          <div class="botside d-flex align-items-center">
+            <div class="avatar"></div>
+            <div class="profile-data">
+              <strong>Kevin Siqueira</strong>
+              <span>@kevind3v</span>
+            </div>
+            <div class="exit">
+              <span class="material-icons"> exit_to_app </span>
+            </div>
           </div>
         </section>
         <section class="content d-flex flex-column">
@@ -141,7 +151,19 @@
             <span class="material-icons-outlined"> email </span>
           </article>
         </section>
-        <div class="sidebar"></div>
+        <section class="sidebar">
+          <div class="search">
+            <input type="text" placeholder="Buscar no Twitter" />
+            <span class="material-icons-outlined">search</span>
+          </div>
+          <div class="body">
+            <p>Dolor voluptate dolor anim occaecat exercitation laboris culpa cillum veniam dolore mollit.</p>
+            <p>Dolor voluptate dolor anim occaecat exercitation laboris culpa cillum veniam dolore mollit.</p>
+            <p>Dolor voluptate dolor anim occaecat exercitation laboris culpa cillum veniam dolore mollit.</p>
+            <p>Dolor voluptate dolor anim occaecat exercitation laboris culpa cillum veniam dolore mollit.</p>
+            <p>Dolor voluptate dolor anim occaecat exercitation laboris culpa cillum veniam dolore mollit.</p>
+          </div>
+        </section>
       </div>
     </main>
 

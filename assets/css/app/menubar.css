@@ -27,9 +27,11 @@ main#feed .bottom-menu span.active {
 /*---------------------*/
 /*----- MENU LEFT -----*/
 /*---------------------*/
+section.menubar::-webkit-scrollbar,
 section.menubar {
   display: none;
 }
+
 section.menubar .topside .menu-button {
   display: flex;
   align-items: center;
@@ -38,6 +40,19 @@ section.menubar .topside .menu-button {
   outline: 0;
   background: transparent;
   border: none;
+}
+section.menubar .topside .menu-button {
+  cursor: pointer;
+  border-radius: 25px;
+}
+section.menubar .topside .menu-button:hover {
+  background: var(--twitter-dark-hover);
+}
+section.menubar .topside .menu-button:hover > span,
+section.menubar .topside .menu-button:hover > strong,
+section.menubar .topside .menu-button.active > span,
+section.menubar .topside .menu-button.active > strong {
+  color: var(--twitter);
 }
 section.menubar .topside .menu-button + button {
   margin-top: 16.5px;
@@ -67,9 +82,27 @@ section.menubar .topside .logo i {
   color: var(--twitter);
   margin-bottom: 20px;
 }
+section.menubar .botside {
+  margin-top: 20px;
+}
+section.menubar .botside .avatar {
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--gray);
+}
+section.menubar .botside .profile-data,
+section.menubar .botside .exit {
+  display: none;
+}
 @media (min-width: 1280px) {
   section.menubar .topside {
     align-items: flex-start !important;
+  }
+  section.menubar .topside .menu-button {
+    padding-right: 15px;
+    padding-left: 15px;
   }
   section.menubar .topside .menu-button + button:last-child {
     width: 100%;
@@ -83,6 +116,27 @@ section.menubar .topside .logo i {
     margin-left: 19px;
     font-weight: bold;
     font-size: 19px;
+  }
+  section.menubar .botside .profile-data {
+    display: flex;
+    margin-left: 10px;
+    flex-direction: column;
+    font-size: 14px;
+  }
+  section.menubar .botside .profile-data span {
+    font-weight: normal;
+    color: var(--gray);
+  }
+  section.menubar .botside .exit {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    color: var(--white);
+    margin-left: 30px;
+    cursor: pointer;
+  }
+  section.menubar .botside .exit:hover > span {
+    color: var(--like);
   }
 }
 @media (min-width: 500px) {

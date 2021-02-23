@@ -16,6 +16,7 @@ main#feed .content {
 main#feed .content .header {
   z-index: 2;
   position: sticky;
+  top: 0;
   background: var(--primary);
   align-items: center;
   text-align: left;
