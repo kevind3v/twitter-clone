@@ -28,8 +28,8 @@
   }
 }
 @media (min-width: 992px) {
-  #main main .middle .btn-login,
-  #main main .middle .btn-sign-up {
+  #main main .middle a.btn,
+  #main main .middle a.btn {
     width: 70%;
   }
 }

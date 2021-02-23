@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
     <link rel="stylesheet" href="../../shared/styles/boot.css" />
-    <link rel="stylesheet" href="../../assets/css/app/style.css" />
+    <link rel="stylesheet" href="../../assets/css/app/profile.css" />
+    <link rel="stylesheet" href="../../assets/css/app/feed.css" />
     <link rel="stylesheet" href="../../assets/css/app/responsive.css" />
   </head>
   <body>
@@ -21,7 +22,7 @@
       <div class="row wrapper justify-content-center">
         <div class="menubar">a</div>
         <section class="content d-flex flex-column">
-          <article class="header d-flex">
+          <header class="header d-flex">
             <button>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -31,14 +32,14 @@
               <strong>Kevin Siqueira</strong>
               <span>625 Tweets</span>
             </div>
-          </article>
+          </header>
 
-          <article class="profile-page">
+          <article class="profile-page d-flex flex-column">
             <div class="banner">
               <div class="avatar"></div>
             </div>
-            <div class="profile-data">
-              <button class="edit-profile" outlined>Editar Perfil</button>
+            <div class="profile-data d-flex flex-column">
+              <button class="btn outlined edit-profile">Editar Perfil</button>
 
               <h1>Kevin Siqueira</h1>
               <h2>@kevind3v</h2>
@@ -51,16 +52,56 @@
                   Itaquaquecetuba, São Paulo - Brasil
                 </li>
                 <li>
-                  <span class="material-icons-outlined"> cake </span>
+                  <span class="material-icons"> cake </span>
                   Nascido(a) em 14 de maio de 2002
                 </li>
               </ul>
 
-              <div class="followage">
+              <div class="followage d-flex">
                 <span>segundo <strong>94</strong></span>
                 <span><strong>194</strong> seguidores</span>
               </div>
             </div>
+          </article>
+
+          <div class="tabs">
+            <span class="tab">Tweets</span>
+          </div>
+
+          <article class="tweets d-flex flex-column flex-shrink-0">
+            <article class="tweet d-flex flex-column">
+              <div class="retweeted d-flex">
+                <i class="fas fa-hashtag"></i>
+                Você retweetou
+              </div>
+              <div class="body d-flex">
+                <div class="avatar flex-shrink-0"></div>
+                <div class="content d-flex flex-column">
+                  <header class="d-flex align-items-center">
+                    <strong>BrBunny</strong>
+                    <span>@brbunny</span>
+                    <div class="dot"></div>
+                    <div class="time">14 de mai</div>
+                  </header>
+                  <p class="description">Vamos voar</p>
+                  <div class="image"></div>
+                  <div class="icons d-flex align-items-center justify-content-between">
+                    <div class="status">
+                      <i class="far fa-comment"></i>
+                      25
+                    </div>
+                    <div class="status">
+                      <i class="fas fa-retweet"></i>
+                      18
+                    </div>
+                    <div class="status">
+                      <i class="fas fa-heart"></i>
+                      25
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
           </article>
 
           <article class="bottom-menu d-flex justify-content-between">

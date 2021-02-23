@@ -37,21 +37,8 @@
   margin-bottom: 20px;
   font-weight: 700;
 }
-#main main .middle .btn-sign-up {
-  background-color: var(--twitter);
-  color: #fff;
-}
-#main main .middle .btn-login {
+#main main .middle a.btn + a {
   margin-top: 20px;
-  background-color: transparent;
-  border: 1px solid var(--twitter);
-  color: var(--twitter);
-}
-#main main .middle .btn-sign-up:hover {
-  background-color: var(--twitter-light-hover);
-}
-#main main .middle .btn-login:hover {
-  background-color: var(--twitter-light-hover-rgba);
 }
 #main footer .nav-link {
   padding: 5px 15px;
@@ -74,16 +61,7 @@
 #login .form h3 {
   font-weight: 700;
 }
-#login .form button {
-  background: var(--twitter);
-  color: #fff;
-}
-#login .form button:disabled {
-  opacity: 0.5;
-}
-#login .form button:hover {
-  background-color: var(--twitter-light-hover);
-}
+
 #login .form .link-login {
   color: var(--twitter);
   margin-top: 15px;

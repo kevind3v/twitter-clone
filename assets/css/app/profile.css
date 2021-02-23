@@ -1,0 +1,166 @@
+main#feed {
+  background: var(--primary);
+}
+main#feed .wrapper {
+  height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+main#feed .content {
+  width: min(601px, 100%);
+}
+main#feed .bottom-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: var(--primary);
+  width: 100%;
+  border-top: 1px solid var(--outline);
+  padding: 8px min(46px, max(10vw, 10px));
+}
+main#feed .bottom-menu span {
+  color: var(--gray);
+  cursor: pointer;
+}
+main#feed .bottom-menu span:hover,
+main#feed .bottom-menu span.active {
+  color: var(--twitter) !important;
+}
+/*-------------------*/
+/*----- PROFILE -----*/
+/*-------------------*/
+main#feed .content .header {
+  z-index: 2;
+  position: sticky;
+  background: var(--primary);
+  align-items: center;
+  text-align: left;
+  padding: 8px 0 9px 13px;
+  border-bottom: 1px solid var(--outline);
+}
+main#feed .content .header button {
+  padding: 8px;
+  border-radius: 50%;
+  outline: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+main#feed .content .header button svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--twitter);
+}
+
+main#feed .content .header button:hover {
+  background: var(--twitter-dark-hover);
+}
+main#feed .content .profile-info {
+  margin-left: 17px;
+}
+main#feed .content .profile-info strong {
+  font-size: 19px;
+}
+main#feed .content .profile-info span {
+  font-size: 15px;
+  color: var(--gray);
+}
+/*----- PROFILE PAGE ------*/
+main#feed .content .profile-page {
+  height: 100%;
+  overflow-y: auto;
+
+  scrollbar-width: none; /** Firefox */
+}
+main#feed .content .profile-page::-webkit-scrollbar {
+  display: none;
+}
+main#feed .content .profile-page .banner {
+  flex-shrink: 0;
+  width: 100%;
+  height: min(33vw, 199px);
+  background: var(--twitter);
+  position: relative;
+}
+main#feed .content .profile-page .banner .avatar {
+  width: max(45px, min(135px, 22vw));
+  height: max(45px, min(135px, 22vw));
+  border: 3.75px solid var(--primary);
+  background: var(--gray);
+  border-radius: 50%;
+  position: absolute;
+  bottom: max(-60px, -10vw);
+  left: 15px;
+}
+main#feed .content .profile-page .profile-data {
+  padding: min(calc(10vw + 7px), 67px) 16px 0;
+  position: relative;
+}
+main#feed .content .profile-page .profile-data .edit-profile {
+  position: absolute;
+  top: 2vw;
+  right: 7px;
+  padding: 4px 16px;
+  font-size: 13px;
+}
+main#feed .content .profile-page .profile-data h1 {
+  font-weight: bold;
+  font-size: 19px;
+}
+main#feed .content .profile-page .profile-data h2 {
+  font-weight: normal;
+  font-size: 15px;
+  color: var(--gray);
+}
+main#feed .content .profile-page .profile-data p {
+  font-size: 15px;
+  margin-top: 11px;
+}
+main#feed .content .profile-page .profile-data a {
+  text-decoration: none;
+  color: var(--twitter);
+}
+main#feed .content .profile-page .profile-data ul {
+  list-style: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+main#feed .content .profile-page .profile-data ul li {
+  font-size: 15px;
+}
+main#feed .content .profile-page .profile-data ul li,
+main#feed .content .profile-page .profile-data ul li span {
+  color: var(--gray);
+  display: flex;
+}
+main#feed .content .profile-page .profile-data ul li span {
+  font-size: 20px;
+  margin-right: 5px;
+}
+main#feed .content .profile-page .profile-data .followage span {
+  font-size: 15px;
+  color: var(--gray);
+}
+main#feed .content .profile-page .profile-data .followage span + span {
+  margin-left: 20px;
+}
+/*----------------*/
+/*----- TABS -----*/
+/*----------------*/
+main#feed .content .tabs {
+  margin-top: 10px;
+  padding: 11px 0 15px;
+  border-bottom: 2px solid var(--twitter);
+  text-align: center;
+}
+main#feed .content .tabs:hover {
+  background: var(--twitter-dark-hover);
+}
+main#feed .content .tabs .tab {
+  color: var(--twitter);
+  font-weight: bold;
+  font-size: 15px;
+  outline: 0;
+  cursor: pointer;
+}

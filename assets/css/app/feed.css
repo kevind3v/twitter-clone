@@ -1,0 +1,117 @@
+/*----------------*/
+/*----- FEED -----*/
+/*----------------*/
+article.tweets {
+  margin-bottom: 40px;
+}
+article.tweets .tweet {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--outline);
+  max-width: 100%;
+}
+article.tweets .tweet:last-child {
+  border-bottom: 0 !important;
+}
+article.tweets .tweet .retweeted {
+  align-items: center;
+  font-size: 13px;
+  color: var(--gray);
+}
+article.tweets .tweet .retweeted i {
+  font-size: 13px;
+  margin-left: 35px;
+  margin-right: 9px;
+  color: var(--gray);
+}
+article.tweets .tweet .body {
+  margin-top: 3px;
+  position: relative;
+}
+article.tweets .tweet .body .avatar {
+  width: 49px;
+  height: 49px;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  background: var(--gray);
+  border-radius: 50%;
+}
+article.tweets .tweet .body .content {
+  border: none !important;
+  width: 100%;
+  margin-top: 2px;
+  margin-left: 59px;
+}
+article.tweets .tweet .body .content header {
+  font-size: 15px;
+  white-space: nowrap;
+}
+article.tweets .tweet .body .content header strong {
+  margin-right: 5px;
+}
+article.tweets .tweet .body .content header span,
+article.tweets .tweet .body .content header .time {
+  color: var(--gray);
+}
+article.tweets .tweet .body .content header strong,
+article.tweets .tweet .body .content header span {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+article.tweets .tweet .body .content header .dot {
+  background: var(--gray);
+  width: 2px;
+  height: 2px;
+  margin: 0 10px;
+}
+article.tweets .tweet .body .content .description {
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 0px;
+}
+article.tweets .tweet .body .content .image {
+  margin-top: 12px;
+  width: 100%;
+  height: min(285px, max(175px, 41vw));
+  background: url('https://source.unsplash.com/random') var(--outline);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 14px;
+  cursor: pointer;
+}
+article.tweets .tweet .body .content .image:hover {
+  opacity: 0.7;
+}
+article.tweets .tweet .body .content .icons {
+  flex-wrap: wrap;
+  margin: 11px auto 0;
+  width: 65%;
+}
+article.tweets .tweet .body .content .icons .status {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+article.tweets .tweet .body .content .icons .status:nth-child(1),
+article.tweets .tweet .body .content .icons .status:nth-child(1) i {
+  color: var(--gray);
+}
+article.tweets .tweet .body .content .icons .status:nth-child(2),
+article.tweets .tweet .body .content .icons .status:nth-child(2) i {
+  color: var(--retweet);
+}
+article.tweets .tweet .body .content .icons .status:nth-child(3),
+article.tweets .tweet .body .content .icons .status:nth-child(3) i {
+  color: var(--like);
+}
+article.tweets .tweet .body .content .icons .status:hover {
+  opacity: 0.7;
+}
+article.tweets .tweet .body .content .icons .status i {
+  margin-right: 5px;
+  font-size: 20px;
+}

@@ -50,13 +50,31 @@ body {
 }
 .btn {
   display: block;
-  border-radius: 100px;
-  border: 1px solid #1da1f2;
+  border-radius: 25px;
+  border: 1px solid var(--twitter);
   text-align: center;
-  padding: 15px;
+  padding: 14px;
   font-weight: bold;
   box-sizing: border-box;
   line-height: 20px;
+  background: var(--twitter);
+  color: #fff;
+  font-size: 15px;
+  outline: 0;
+}
+.btn.outlined {
+  color: var(--twitter) !important;
+  background: transparent;
+}
+.btn:disabled {
+  opacity: 0.5;
+}
+.btn:hover {
+  color: #fff;
+  background: var(--twitter-light-hover);
+}
+.btn.outlined:hover {
+  background: var(--twitter-dark-hover);
 }
 /*------------------------*/
 /*------ FORM ------*/
