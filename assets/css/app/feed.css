@@ -115,3 +115,14 @@ article.tweets .tweet .body .content .icons .status i {
   margin-right: 5px;
   font-size: 20px;
 }
+
+@media (min-width: 500px) {
+  article.tweets {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 500px) {
+  article.tweets .tweet .body .content .icons {
+    width: 95%;
+  }
+}

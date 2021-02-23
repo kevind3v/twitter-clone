@@ -15,12 +15,42 @@
     <link rel="stylesheet" href="../../shared/styles/boot.css" />
     <link rel="stylesheet" href="../../assets/css/app/profile.css" />
     <link rel="stylesheet" href="../../assets/css/app/feed.css" />
+    <link rel="stylesheet" href="../../assets/css/app/menubar.css" />
     <link rel="stylesheet" href="../../assets/css/app/responsive.css" />
   </head>
   <body>
     <main id="feed" class="container p-0">
-      <div class="row wrapper justify-content-center">
-        <div class="menubar">a</div>
+      <div class="d-flex wrapper justify-content-center">
+        <section class="menubar">
+          <div class="topside d-flex flex-column align-items-center">
+            <div class="logo">
+              <i class="fab fa-twitter"></i>
+            </div>
+            <button class="menu-button">
+              <span class="material-icons-outlined active">home</span>
+              <strong>Página Inicial</strong>
+            </button>
+            <button class="menu-button">
+              <span class="material-icons-outlined"> notifications_none </span>
+              <strong>Notifications</strong>
+            </button>
+            <button class="menu-button">
+              <span class="material-icons-outlined"> email </span>
+              <strong>Notifications</strong>
+            </button>
+            <button class="menu-button">
+              <span class="material-icons-outlined"> favorite_border </span>
+              <strong>Favoritos</strong>
+            </button>
+            <button class="menu-button active">
+              <span class="material-icons"> person </span>
+              <strong>Favoritos</strong>
+            </button>
+            <button class="btn">
+              <span>Tweetar</span>
+            </button>
+          </div>
+        </section>
         <section class="content d-flex flex-column">
           <header class="header d-flex">
             <button>

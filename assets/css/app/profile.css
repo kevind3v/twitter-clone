@@ -9,24 +9,7 @@ main#feed .wrapper {
 main#feed .content {
   width: min(601px, 100%);
 }
-main#feed .bottom-menu {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-  background: var(--primary);
-  width: 100%;
-  border-top: 1px solid var(--outline);
-  padding: 8px min(46px, max(10vw, 10px));
-}
-main#feed .bottom-menu span {
-  color: var(--gray);
-  cursor: pointer;
-}
-main#feed .bottom-menu span:hover,
-main#feed .bottom-menu span.active {
-  color: var(--twitter) !important;
-}
+
 /*-------------------*/
 /*----- PROFILE -----*/
 /*-------------------*/
@@ -163,4 +146,17 @@ main#feed .content .tabs .tab {
   font-size: 15px;
   outline: 0;
   cursor: pointer;
+}
+@media (min-width: 320px) {
+  main#feed .content .profile-page .profile-data .edit-profile {
+    top: 10px;
+    padding: 10px 19px;
+    font-size: 15px;
+  }
+}
+@media (min-width: 500px) {
+  main#feed .content {
+    border-left: 1px solid var(--outline);
+    border-right: 1px solid var(--outline);
+  }
 }
