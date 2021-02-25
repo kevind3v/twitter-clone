@@ -13,33 +13,6 @@ main#feed .content {
 /*-------------------*/
 /*----- PROFILE -----*/
 /*-------------------*/
-main#feed .content .header {
-  z-index: 2;
-  position: sticky;
-  top: 0;
-  background: var(--primary);
-  align-items: center;
-  text-align: left;
-  padding: 8px 0 9px 13px;
-  border-bottom: 1px solid var(--outline);
-}
-main#feed .content .header button {
-  padding: 8px;
-  border-radius: 50%;
-  outline: 0;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-}
-main#feed .content .header button svg {
-  width: 24px;
-  height: 24px;
-  stroke: var(--twitter);
-}
-
-main#feed .content .header button:hover {
-  background: var(--twitter-dark-hover);
-}
 main#feed .content .profile-info {
   margin-left: 17px;
 }
@@ -64,7 +37,7 @@ main#feed .content .profile-page .banner {
   flex-shrink: 0;
   width: 100%;
   height: min(33vw, 199px);
-  background: var(--twitter);
+  background: var(--outline);
   position: relative;
 }
 main#feed .content .profile-page .banner .avatar {

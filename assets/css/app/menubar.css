@@ -89,6 +89,7 @@ section.menubar .topside .menu-button + button:last-child img {
 }
 section.menubar .topside .menu-button + button:last-child span {
   display: none;
+  color: #fff;
 }
 section.menubar .topside .menu-button strong {
   display: none;
@@ -100,7 +101,7 @@ section.menubar .topside .logo {
 }
 section.menubar .topside .logo i {
   font-size: 1.8rem;
-  color: var(--white) !important;
+  color: var(--brand) !important;
   position: absolute;
   left: 11px;
   top: 11px;

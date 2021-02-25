@@ -6,22 +6,41 @@
 /*------------------*/
 /*----- GLOBAL -----*/
 /*------------------*/
-:root {
-  --primary: #000;
-  --secondary: #151b1c;
-  --search: #202327;
-  --white: #d9d9d9;
-  --gray: #7a7a7a;
-  --outline: #2f3336;
+html[data-theme='light'] {
+  --primary: #fff;
+  --secondary: #f7f9fa;
+  --search: #ebeef0;
+  --white: #000;
+  --gray: #7e94a7;
+  --outline: #ebeef0;
   --retweet: #00c06b;
   --like: #e8265e;
   --twitter: #33a1f2;
-  --twitter-dark-hover: #011017;
+  --brand: #33a1f2;
+  --divisor: #f7f7f7;
+  --twitter-dark-hover: #e8f5fe;
   --twitter-light-hover: #2c8ed6;
   --twitter-light-hover-rgba: rgba(44, 142, 214, 0.1);
   --twitter-modal: rgba(91, 112, 131, 0.4);
   --font-family: Roboto, 'Nunito', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Ubuntu,
     'Open Sans', Arial, sans-serif;
+}
+html[data-theme='dark'] {
+  --primary: #000;
+  --white: #d9d9d9;
+  --secondary: #151b1c;
+  --search: #202327;
+  --gray: #7a7a7a;
+  --brand: #d9d9d9;
+  --outline: #2f3336;
+  --retweet: #00c06b;
+  --like: #e8265e;
+  --twitter: #33a1f2;
+  --divisor: rgb(21, 24, 28);
+  --twitter-dark-hover: #011017;
+  --twitter-light-hover: #2c8ed6;
+  --twitter-light-hover-rgba: rgba(44, 142, 214, 0.1);
+  --twitter-modal: rgba(91, 112, 131, 0.4);
 }
 * {
   margin: 0;
@@ -38,7 +57,7 @@ body {
 }
 html,
 body {
-  background: var(--primary) !important;
+  background-color: var(--primary) !important;
 }
 *,
 button,
@@ -47,7 +66,7 @@ input {
 }
 body {
   overflow-x: hidden;
-  background: #fff;
+  background-color: var(--primary) !important;
 }
 ::-webkit-scrollbar-track {
   background-color: #f4f4f4;
@@ -71,7 +90,7 @@ body {
   box-sizing: border-box;
   line-height: 20px;
   background: var(--twitter);
-  color: #fff;
+  color: #fff !important;
   font-size: 15px;
   outline: 0;
 }
@@ -98,7 +117,7 @@ body {
 .form input {
   height: 55px;
   background: transparent !important;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--outline);
   border-radius: 5px;
   padding: 12px 12px 0 12px !important;
   display: block;
@@ -135,4 +154,12 @@ body {
   .h-lg-100 {
     height: 100%;
   }
+}
+
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
 }

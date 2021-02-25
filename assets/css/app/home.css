@@ -22,7 +22,8 @@ main#feed .content .tweet-box textarea {
   background: transparent;
   width: 100%;
   border: none;
-  min-height: 40px;
+  height: 35px;
+  min-height: 35px;
   font-size: 20px;
   outline: none;
   resize: none;
@@ -49,4 +50,10 @@ main#feed .content .tweet-box .tweet-box-content .btn-icons .btn-icon:hover {
 }
 main#feed .content .tweet-box .tweet-box-content .btn-icons .btn-icon + .btn-icon {
   margin-left: 1px;
+}
+main#feed .content .divisor {
+  height: 12px;
+  width: 100%;
+  border-bottom: 1px solid var(--outline);
+  background: var(--divisor);
 }

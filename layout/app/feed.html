@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -108,9 +108,17 @@
           </div>
         </section>
         <section class="content d-flex flex-column">
-          <header class="header d-flex pl-0">
+          <header class="header d-flex justify-content-between pl-0">
             <div class="profile-info d-flex flex-column">
               <strong>Home</strong>
+            </div>
+            <div class="dark-mode">
+              <input type="checkbox" class="checkbox" id="theme-checkbox" />
+              <label for="theme-checkbox" class="theme">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="boll"></div>
+              </label>
             </div>
           </header>
 
@@ -132,6 +140,42 @@
                 </div>
               </form>
             </div>
+          </article>
+          <div class="divisor"></div>
+          <article class="tweets d-flex flex-column flex-shrink-0">
+            <article class="tweet d-flex flex-column">
+              <div class="retweeted d-flex">
+                <i class="fas fa-hashtag"></i>
+                Você retweetou
+              </div>
+              <div class="body d-flex">
+                <div class="avatar flex-shrink-0"></div>
+                <div class="content d-flex flex-column">
+                  <header class="d-flex align-items-center">
+                    <strong>BrBunny</strong>
+                    <span>@brbunny</span>
+                    <div class="dot"></div>
+                    <div class="time">14 de mai</div>
+                  </header>
+                  <p class="description">Vamos voar</p>
+                  <div class="image"></div>
+                  <div class="icons d-flex align-items-center justify-content-between">
+                    <div class="status">
+                      <i class="far fa-comment"></i>
+                      25
+                    </div>
+                    <div class="status">
+                      <i class="fas fa-retweet"></i>
+                      18
+                    </div>
+                    <div class="status">
+                      <i class="fas fa-heart"></i>
+                      25
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
           </article>
 
           <article class="bottom-menu d-flex justify-content-between">
@@ -239,5 +283,6 @@
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../assets/js/app/resize.js"></script>
+    <script src="../../shared/scripts/theme.js"></script>
   </body>
 </html>

@@ -23,7 +23,7 @@
 }
 #main main .middle i,
 #login .form i {
-  color: var(--white);
+  color: var(--brand);
   font-size: 50px;
   margin-bottom: 50px;
 }
