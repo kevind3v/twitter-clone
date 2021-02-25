@@ -1,7 +1,15 @@
+let transition = () => {
+  $('html').addClass('transition')
+  window.setTimeout(() => {
+    $('html').removeClass('transition')
+  }, 1000)
+}
 $('#theme-checkbox').on('change', function () {
   if (this.checked) {
-    document.documentElement.setAttribute('data-theme', 'dark')
+    transition()
+    $('html').attr('data-theme', 'dark')
   } else {
-    document.documentElement.setAttribute('data-theme', 'light')
+    transition()
+    $('html').attr('data-theme', 'light')
   }
 })

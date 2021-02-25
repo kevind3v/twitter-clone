@@ -54,18 +54,14 @@ section.menubar .topside .menu-button svg {
 section.menubar .topside .menu-button:hover {
   background: var(--twitter-dark-hover);
 }
-section.menubar .topside .menu-button:hover > :not(.svg),
-section.menubar .topside .menu-button.active > :not(.svg) {
+section.menubar .topside .menu-button:hover > svg,
+section.menubar .topside .menu-button:hover > strong,
+section.menubar .topside .menu-button.active > strong,
+section.menubar .topside .menu-button.active > svg {
   color: var(--twitter);
   stroke: var(--twitter);
 }
-section.menubar .topside .menu-button .svg {
-  fill: var(--white);
-}
-section.menubar .topside .menu-button:hover > .svg,
-section.menubar .topside .menu-button.active > .svg {
-  fill: var(--twitter);
-}
+
 section.menubar .topside .menu-button + button {
   margin-top: 10px;
 }
