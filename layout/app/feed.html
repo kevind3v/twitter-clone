@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../../assets/css/app/feed.css" />
     <link rel="stylesheet" href="../../assets/css/app/menubar.css" />
     <link rel="stylesheet" href="../../assets/css/app/sidebar.css" />
+    <link rel="stylesheet" href="../../assets/css/app/home.css" />
   </head>
   <body>
     <main id="feed" class="container-fluid px-0">
@@ -107,86 +108,30 @@
           </div>
         </section>
         <section class="content d-flex flex-column">
-          <header class="header d-flex">
-            <button>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
-            </button>
+          <header class="header d-flex pl-0">
             <div class="profile-info d-flex flex-column">
-              <strong>Kevin Siqueira</strong>
-              <span>625 Tweets</span>
+              <strong>Home</strong>
             </div>
           </header>
 
-          <article class="profile-page d-flex flex-column">
-            <div class="banner">
-              <div class="avatar"></div>
-            </div>
-            <div class="profile-data d-flex flex-column">
-              <button class="btn outlined edit-profile">Editar Perfil</button>
-
-              <h1>Kevin Siqueira</h1>
-              <h2>@kevind3v</h2>
-
-              <p>Developer</p>
-
-              <ul>
-                <li>
-                  <span class="material-icons-outlined"> location_on </span>
-                  Itaquaquecetuba, São Paulo - Brasil
-                </li>
-                <li>
-                  <span class="material-icons"> cake </span>
-                  Nascido(a) em 14 de maio de 2002
-                </li>
-              </ul>
-
-              <div class="followage d-flex">
-                <span>segundo <strong>94</strong></span>
-                <span><strong>194</strong> seguidores</span>
-              </div>
-            </div>
-          </article>
-
-          <div class="tabs">
-            <span class="tab">Tweets</span>
-          </div>
-
-          <article class="tweets d-flex flex-column flex-shrink-0">
-            <article class="tweet d-flex flex-column">
-              <div class="retweeted d-flex">
-                <i class="fas fa-hashtag"></i>
-                Você retweetou
-              </div>
-              <div class="body d-flex">
-                <div class="avatar flex-shrink-0"></div>
-                <div class="content d-flex flex-column">
-                  <header class="d-flex align-items-center">
-                    <strong>BrBunny</strong>
-                    <span>@brbunny</span>
-                    <div class="dot"></div>
-                    <div class="time">14 de mai</div>
-                  </header>
-                  <p class="description">Vamos voar</p>
-                  <div class="image"></div>
-                  <div class="icons d-flex align-items-center justify-content-between">
-                    <div class="status">
-                      <i class="far fa-comment"></i>
-                      25
+          <article class="tweet-box d-flex">
+            <div class="avatar"></div>
+            <div class="tweet-box-content">
+              <form action="#">
+                <textarea class="textarea" name="tweet" placeholder="O que está acontecendo?"></textarea>
+                <div class="tweet-box-buttons d-flex align-items-center justify-content-between flex-wrap">
+                  <div class="btn-icons d-flex flex-wrap">
+                    <div class="btn-icon">
+                      <img src="../../assets/img/svg/image.svg" alt="Image" />
                     </div>
-                    <div class="status">
-                      <i class="fas fa-retweet"></i>
-                      18
-                    </div>
-                    <div class="status">
-                      <i class="fas fa-heart"></i>
-                      25
+                    <div class="btn-icon">
+                      <img src="../../assets/img/svg/smile.svg" alt="Emoji" />
                     </div>
                   </div>
+                  <button class="btn btn-tweet">Tweet</button>
                 </div>
-              </div>
-            </article>
+              </form>
+            </div>
           </article>
 
           <article class="bottom-menu d-flex justify-content-between">
@@ -293,5 +238,6 @@
     <!-- JS -->
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/app/resize.js"></script>
   </body>
 </html>

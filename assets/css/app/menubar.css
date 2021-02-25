@@ -31,7 +31,9 @@ section.menubar::-webkit-scrollbar,
 section.menubar {
   display: none;
 }
-
+section.menubar {
+  height: 100vh;
+}
 section.menubar .topside .menu-button {
   display: flex;
   align-items: center;
@@ -45,17 +47,27 @@ section.menubar .topside .menu-button {
   cursor: pointer;
   border-radius: 25px;
 }
+section.menubar .topside .menu-button svg {
+  height: 1.75rem;
+  width: 1.75rem;
+}
 section.menubar .topside .menu-button:hover {
   background: var(--twitter-dark-hover);
 }
-section.menubar .topside .menu-button:hover > span,
-section.menubar .topside .menu-button:hover > strong,
-section.menubar .topside .menu-button.active > span,
-section.menubar .topside .menu-button.active > strong {
+section.menubar .topside .menu-button:hover > :not(.svg),
+section.menubar .topside .menu-button.active > :not(.svg) {
   color: var(--twitter);
+  stroke: var(--twitter);
+}
+section.menubar .topside .menu-button .svg {
+  fill: var(--white);
+}
+section.menubar .topside .menu-button:hover > .svg,
+section.menubar .topside .menu-button.active > .svg {
+  fill: var(--twitter);
 }
 section.menubar .topside .menu-button + button {
-  margin-top: 16.5px;
+  margin-top: 10px;
 }
 section.menubar .topside .menu-button + section.menubar .topside .menu-button span {
   flex-shrink: 0;
@@ -63,9 +75,17 @@ section.menubar .topside .menu-button + section.menubar .topside .menu-button sp
   color: var(--white);
 }
 section.menubar .topside .menu-button + button:last-child {
-  margin-top: 33px;
-  width: 40px;
-  height: 40px;
+  margin-top: 20px;
+  width: 48px;
+  height: 48px;
+  position: relative;
+}
+section.menubar .topside .menu-button + button:last-child img {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 section.menubar .topside .menu-button + button:last-child span {
   display: none;
@@ -74,13 +94,16 @@ section.menubar .topside .menu-button strong {
   display: none;
 }
 section.menubar .topside .logo {
-  width: 100%;
-  text-align: center;
+  width: 48px;
+  height: 48px;
+  position: relative;
 }
 section.menubar .topside .logo i {
-  font-size: 35px;
-  color: var(--twitter);
-  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: var(--white) !important;
+  position: absolute;
+  left: 11px;
+  top: 11px;
 }
 section.menubar .botside {
   margin-top: 20px;
@@ -104,12 +127,18 @@ section.menubar .botside .exit {
     padding-right: 15px;
     padding-left: 15px;
   }
+  section.menubar .topside .logo {
+    margin-left: 5px;
+  }
   section.menubar .topside .menu-button + button:last-child {
     width: 100%;
     height: unset;
   }
   section.menubar .topside .menu-button + button:last-child span {
     display: inline;
+  }
+  section.menubar .topside .menu-button + button:last-child img {
+    display: none;
   }
   section.menubar .topside .menu-button strong {
     display: inline;
