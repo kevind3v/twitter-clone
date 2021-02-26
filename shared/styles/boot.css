@@ -36,6 +36,7 @@ html[data-theme='dark'] {
   --retweet: #00c06b;
   --like: #e8265e;
   --twitter: #33a1f2;
+  --brand: #33a1f2;
   --divisor: rgb(21, 24, 28);
   --twitter-dark-hover: #011017;
   --twitter-light-hover: #2c8ed6;
@@ -116,12 +117,19 @@ body {
 }
 .form input {
   height: 55px;
-  background: transparent !important;
-  border: 1px solid var(--outline);
   border-radius: 5px;
   padding: 12px 12px 0 12px !important;
   display: block;
+}
+.form textarea {
+  resize: none;
+  padding: 18px 12px 0 12px !important;
+}
+.form input,
+.form textarea {
   transition: all 0.2s ease;
+  background: transparent !important;
+  border: 1px solid var(--outline);
 }
 .form .form-group {
   position: relative;
@@ -134,22 +142,57 @@ body {
   transition: all 0.2s ease;
   cursor: text;
 }
-.form input:focus {
+.form input:focus,
+.form textarea:focus {
   box-shadow: 0 0 0 0;
   outline: 0;
   border: 2px solid var(--twitter);
 }
+.form textarea:focus + label,
 .form input:focus + label {
   color: var(--twitter);
 }
+.form textarea:focus + label,
 .form input:focus + label,
-.form input:valid + label {
+.form textarea + .l-form,
+.form input + .l-form {
   top: 5px;
   font-size: 12px;
+}
+.modal {
+  background-color: var(--twitter-modal);
+}
+.app-modal .modal-content {
+  background: var(--primary);
+}
+.app-modal .modal-content .modal-header {
+  border: none;
+  padding: 0 5px;
+  height: 53px;
 }
 /*------------------------*/
 /*------ RESPONSIVE ------*/
 /*------------------------*/
+@media (max-width: 768px) {
+  .app-modal {
+    margin: 0;
+    max-width: 100% !important;
+    height: 100vh !important;
+    align-items: inherit;
+  }
+}
+@media (min-width: 768px) {
+  .app-modal,
+  .app-modal .modal-content {
+    min-height: 400px;
+    max-height: 90vh;
+    height: 650px;
+    min-width: 600px;
+    width: 600px;
+    max-width: 80vw;
+    border-radius: 16px;
+  }
+}
 @media (min-width: 992px) {
   .h-lg-100 {
     height: 100%;

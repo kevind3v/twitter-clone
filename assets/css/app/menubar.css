@@ -11,13 +11,14 @@ main#feed .bottom-menu {
   border-top: 1px solid var(--outline);
   padding: 8px min(46px, max(10vw, 10px));
 }
-main#feed .bottom-menu span {
-  color: var(--gray);
+main#feed .bottom-menu svg {
+  width: 25px;
+  stroke: var(--gray);
   cursor: pointer;
 }
-main#feed .bottom-menu span:hover,
-main#feed .bottom-menu span.active {
-  color: var(--twitter) !important;
+main#feed .bottom-menu svg:hover,
+main#feed .bottom-menu svg.active {
+  stroke: var(--twitter) !important;
 }
 @media (min-width: 500px) {
   main#feed .bottom-menu {

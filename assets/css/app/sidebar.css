@@ -10,9 +10,9 @@ section.sidebar .search {
   background: var(--primary);
   max-height: 57px;
 }
-section.sidebar .search span {
-  font-size: 27px;
-  color: var(--gray);
+section.sidebar .search svg {
+  width: 24px;
+  stroke: var(--gray);
 }
 section.sidebar .search input {
   width: 100%;
@@ -30,10 +30,10 @@ section.sidebar .search input::placeholder {
 section.sidebar .search input:focus {
   border: 1px solid var(--twitter);
 }
-section.sidebar .search input:focus ~ span {
+section.sidebar .search input:focus ~ svg {
   color: var(--twitter);
 }
-section.sidebar .search input ~ span {
+section.sidebar .search input ~ svg {
   position: relative;
   top: -33px;
   left: 15px;

@@ -1,22 +1,4 @@
-@media (max-width: 768px) {
-  .sign-modal {
-    margin: 0;
-    max-width: 100% !important;
-    height: 100vh !important;
-    align-items: inherit;
-  }
-}
 @media (min-width: 768px) {
-  .sign-modal,
-  .sign-modal .modal-content {
-    min-height: 400px;
-    max-height: 90vh;
-    height: 650px;
-    min-width: 600px;
-    width: 600px;
-    max-width: 80vw;
-    border-radius: 16px;
-  }
   #main main .middle h1 {
     font-size: 3em;
   }

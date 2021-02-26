@@ -1,3 +1,12 @@
+.app-modal .modal-content h4 {
+  font-weight: 700;
+}
+.app-modal .modal-content small {
+  font-size: 16px;
+}
+.app-modal .modal-content small a {
+  color: var(--twitter);
+}
 /*-----------------*/
 /*----- INDEX -----*/
 /*-----------------*/
@@ -66,6 +75,7 @@
   color: var(--twitter);
   margin-top: 15px;
   font-size: 14px;
+  cursor: pointer;
 }
 #login .form .link-login:hover {
   text-decoration: underline !important;
@@ -113,7 +123,7 @@
   outline: 0;
   font-size: 13px;
 }
-.sign-modal button.btn-sign-in,
+.modal button.btn-sign-in,
 #forget .content button {
   background-color: var(--twitter);
   border: 1px solid var(--twitter);
@@ -122,31 +132,8 @@
 #forget .content button {
   padding: 6px 16px;
 }
-.sign-modal button.btn-sign-in:hover,
+.modal button.btn-sign-in:hover,
 #forget .content button:hover {
   background-color: var(--twitter-light-hover);
   border: 1px solid var(--twitter-light-hover);
-}
-/*----------------------*/
-/*----- SIGN MODAL -----*/
-/*----------------------*/
-.modal {
-  background-color: var(--twitter-modal);
-}
-.sign-modal .modal-content {
-  background: var(--primary);
-}
-.sign-modal .modal-content .modal-header {
-  border: none;
-  padding: 0 15px;
-  height: 53px;
-}
-.sign-modal .modal-content h4 {
-  font-weight: 700;
-}
-.sign-modal .modal-content small {
-  font-size: 16px;
-}
-.sign-modal .modal-content small a {
-  color: var(--twitter);
 }

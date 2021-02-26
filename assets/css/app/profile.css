@@ -10,37 +10,24 @@ main#feed .content {
   width: min(601px, 100%);
 }
 
-/*-------------------*/
-/*----- PROFILE -----*/
-/*-------------------*/
-main#feed .content .profile-info {
-  margin-left: 17px;
-}
-main#feed .content .profile-info strong {
-  font-size: 19px;
-}
-main#feed .content .profile-info span {
-  font-size: 15px;
-  color: var(--gray);
-}
 /*----- PROFILE PAGE ------*/
-main#feed .content .profile-page {
+.profile-page {
   height: 100%;
   overflow-y: auto;
 
   scrollbar-width: none; /** Firefox */
 }
-main#feed .content .profile-page::-webkit-scrollbar {
+.profile-page::-webkit-scrollbar {
   display: none;
 }
-main#feed .content .profile-page .banner {
+.profile-page .banner {
   flex-shrink: 0;
   width: 100%;
   height: min(33vw, 199px);
   background: var(--outline);
   position: relative;
 }
-main#feed .content .profile-page .banner .avatar {
+.profile-page .banner .avatar {
   width: max(45px, min(135px, 22vw));
   height: max(45px, min(135px, 22vw));
   border: 3.75px solid var(--primary);
@@ -101,6 +88,86 @@ main#feed .content .profile-page .profile-data .followage span {
 }
 main#feed .content .profile-page .profile-data .followage span + span {
   margin-left: 20px;
+}
+/*----------------*/
+/*----- MODAL-----*/
+/*----------------*/
+.app-modal .modal-content form {
+  height: 100%;
+}
+.app-modal .modal-header {
+  border-bottom: 1px solid var(--outline) !important;
+}
+.app-modal .modal-header .title .btn-modal {
+  border: none;
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.app-modal .modal-header .title .btn-modal:hover {
+  background: var(--twitter-dark-hover);
+}
+.app-modal .modal-header .title .btn-modal img {
+  width: 30px;
+}
+.app-modal .modal-header .title strong {
+  font-size: 19px;
+  margin-left: 20px;
+}
+.app-modal .modal-header .btn-save {
+  height: 32px;
+  padding: 0 18px;
+}
+.app-modal .modal-body {
+  position: relative;
+  height: 87%;
+  overflow: auto;
+}
+.app-modal .modal-body .forms {
+  padding: min(calc(10vw + 7px), 67px) 16px 0;
+}
+.app-modal .modal-body .forms textarea:focus ~ .count,
+.app-modal .modal-body .forms input:focus ~ .count {
+  display: inline;
+}
+.app-modal .modal-body .forms .count {
+  position: absolute;
+  right: 5px;
+  top: 2px;
+  font-size: 13px;
+  color: var(--gray);
+  display: none;
+}
+.app-modal .modal-body .forms .count,
+.app-modal .modal-body .forms .count span {
+  color: var(--gray);
+}
+
+.app-modal .modal-body .banner .edit-photo,
+.app-modal .modal-body .banner .edit-photo-avatar {
+  position: absolute;
+  background: transparent;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+}
+.app-modal .modal-body .banner .edit-photo {
+  top: 15px;
+  left: 15px;
+}
+.app-modal .modal-body .banner .edit-photo-avatar {
+  bottom: -45px;
+  right: 15px;
+}
+.app-modal .modal-body .banner .edit-photo:hover,
+.app-modal .modal-body .banner .edit-photo-avatar:hover {
+  background: var(--twitter-modal);
+}
+.app-modal .modal-body .banner .edit-photo img,
+.app-modal .modal-body .banner .edit-photo-avatar img {
+  width: 25px;
+  height: 25px;
 }
 /*----------------*/
 /*----- TABS -----*/

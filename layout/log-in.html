@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,24 +19,74 @@
         <h3>Entrar no Twitter</h3>
         <form action="#" method="POST">
           <div class="form-group">
-            <input required id="user" class="form-control" type="text" />
+            <input required id="user" class="form-control i-form" type="text" />
             <label for="user">Telefone, e-mail ou nome de usuário</label>
           </div>
           <div class="form-group">
-            <input required id="passwd" class="form-control" type="password" />
+            <input required autocomplete="off" id="passwd" class="form-control i-form" type="password" />
             <label for="passwd">Senha</label>
           </div>
           <button class="btn btn-block" type="submit">Conecte-se</button>
           <div class="row justify-content-center mt-3">
             <a class="link-login mr-3" href="./forget.html">Esqueceu a senha?</a>
-            <a class="link-login" href="./sign-in.html">Cadastre-se no Twitter</a>
+            <a class="link-login" data-toggle="modal" data-target="#sign-in-modal">Cadastre-se no Twitter</a>
           </div>
         </form>
       </div>
     </main>
 
+    <div
+      class="modal fade"
+      id="sign-in-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="sign-in-modalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered app-modal" role="document">
+        <div class="modal-content px-3">
+          <div class="modal-header justify-content-center">
+            <img class="mt-3" width="30" height="30" src="../assets/img/svg/bird.svg" alt="Twitter" />
+          </div>
+          <div class="modal-body">
+            <div class="row mb-3">
+              <div class="col">
+                <h4>Crie sua conta</h4>
+              </div>
+            </div>
+            <form action="#" class="form">
+              <div class="form-group">
+                <input required id="name" type="text" class="form-control i-form" />
+                <label for="name">Nome</label>
+              </div>
+
+              <div class="form-group">
+                <input required id="email" type="text" class="form-control i-form" />
+                <label for="email">E-mail</label>
+              </div>
+
+              <div class="form-group">
+                <input required id="password" autocomplete="off" type="password" class="form-control i-form" />
+                <label for="password">Senha</label>
+              </div>
+
+              <div class="mt-4 mb-4">
+                <small class="form-text">
+                  Ao inscrever-se, você concorda com os <a href="#">Termos</a>,
+                  <a href="#"> Políticas de Privacidade</a>, e <a href="#">Uso de Cookies</a>.
+                </small>
+              </div>
+
+              <button class="btn btn-sign-in btn-block">Inscrever-se</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- JS -->
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../shared/scripts/inputs.js"></script>
   </body>
 </html>
