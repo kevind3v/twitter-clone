@@ -21,7 +21,7 @@
 }
 #main main .banner {
   width: 100%;
-  background: url('../img/bg-log-in.png') var(--primary);
+  background: url('../../../assets/img/bg-log-in.png') var(--primary);
   background-repeat: no-repeat;
   background-size: cover;
 }

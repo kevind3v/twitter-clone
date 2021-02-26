@@ -1,14 +1,14 @@
-### Composer ###
+/themes/twitter/
+# Created by https://www.toptal.com/developers/gitignore/api/vscode,composer,node,macos,windows,linux,phpstorm,yarn,netbeans
+# Edit at https://www.toptal.com/developers/gitignore?templates=vscode,composer,node,macos,windows,linux,phpstorm,yarn,netbeans
 
+### Composer ###
 composer.phar
 /vendor/
 
 # Commit your application's lock file https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
 # You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
 # composer.lock
-
-### dotenv ###
-.env
 
 ### Linux ###
 *~
@@ -54,6 +54,16 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+### NetBeans ###
+**/nbproject/private/
+**/nbproject/Makefile-*.mk
+**/nbproject/Package-*.bash
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
 ### Node ###
 # Logs
 logs
@@ -62,8 +72,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
-/node_modules/
-
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
@@ -112,6 +120,9 @@ typings/
 # Optional eslint cache
 .eslintcache
 
+# Optional stylelint cache
+.stylelintcache
+
 # Microbundle cache
 .rpt2_cache/
 .rts2_cache_cjs/
@@ -128,6 +139,7 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
+.env
 .env.test
 .env*.local
 
@@ -302,3 +314,21 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+### yarn ###
+# https://yarnpkg.com/advanced/qa#which-files-should-be-gitignored
+
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# if you are NOT using Zero-installs, then:
+# comment the following lines
+!.yarn/cache
+
+# and uncomment the following lines
+# .pnp.*
+
+# End of https://www.toptal.com/developers/gitignore/api/vscode,composer,node,macos,windows,linux,phpstorm,yarn,netbeans

@@ -1,0 +1,41 @@
+<div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="sign-in-modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered app-modal" role="document">
+        <div class="modal-content px-3">
+            <div class="modal-header justify-content-center">
+                <img class="mt-3" width="30" height="30" src="<?= midias('img/svg/bird.svg')?>" alt="Twitter" />
+            </div>
+            <div class="modal-body">
+                <div class="row mb-3">
+                    <div class="col">
+                        <h4>Crie sua conta</h4>
+                    </div>
+                </div>
+                <form action="#" class="form">
+                    <div class="form-group">
+                        <input required id="name" type="text" class="form-control i-form" />
+                        <label for="name">Nome</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input required id="email" type="text" class="form-control i-form" />
+                        <label for="email">E-mail</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input required id="password" autocomplete="off" type="password" class="form-control i-form" />
+                        <label for="password">Senha</label>
+                    </div>
+
+                    <div class="mt-4 mb-4">
+                        <small class="form-text">
+                            Ao inscrever-se, você concorda com os <a href="#">Termos</a>,
+                            <a href="#"> Políticas de Privacidade</a>, e <a href="#">Uso de Cookies</a>.
+                        </small>
+                    </div>
+
+                    <button class="btn btn-sign-in btn-block">Inscrever-se</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
