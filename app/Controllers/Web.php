@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Core\Controller;
+use App\Models\User;
 
 class Web extends Controller
 {
@@ -24,7 +25,9 @@ class Web extends Controller
         $this->view->show("login");
     }
 
-    /** Forget */
+    /**
+     *  Forget
+    */
     public function forget(): void
     {
         $this->view->show("forget");
@@ -38,6 +41,24 @@ class Web extends Controller
      */
     public function register(array $data): void
     {
-        var_dump($data);
+        if (in_array("", $data)) {
+            $json['message'] = "Informe os campos abaixo!!";
+            echo json_encode($json);
+            return;
+        }
+        $user = new User();
+        $user->bootstrap(
+            $data['name'],
+            $data['username'],
+            $data['email'],
+            $data['password']
+        );
+        if (!$user->register()) {
+            $json['message'] = $user->fail()->getMessage();
+        } else {
+            $json['redirect'] = url();
+        }
+        echo json_encode($json);
+        return;
     }
 }
