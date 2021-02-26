@@ -17,8 +17,10 @@ foreach ($cssDir as $css) {
 
 //JS
 $minJS = new JS();
+$minJS->add(dirname(__DIR__, 3) . "/shared/scripts/main.js");
 $minJS->add(dirname(__DIR__, 3) . "/shared/scripts/inputs.js");
 $minJS->add(dirname(__DIR__, 3) . "/shared/scripts/theme.js");
+$minJS->add(dirname(__DIR__, 3) . "/shared/scripts/form.js");
 
 //Theme CSS
 $jsDir = scandir(VIEWS['default'] . VIEWS['web'] . "/assets/js");

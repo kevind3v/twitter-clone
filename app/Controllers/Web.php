@@ -6,7 +6,7 @@ use App\Core\Controller;
 
 class Web extends Controller
 {
-     /** Web Constructor */
+    /** Web Constructor */
     public function __construct($router)
     {
         parent::__construct($router, VIEWS['default'] . VIEWS['web']);
@@ -18,15 +18,26 @@ class Web extends Controller
         $this->view->show("home");
     }
 
-     /** Login */
+    /** Login */
     public function login(): void
     {
         $this->view->show("login");
     }
 
-     /** Login */
+    /** Forget */
     public function forget(): void
     {
         $this->view->show("forget");
+    }
+
+
+    /**
+     * Create User
+     *
+     * @param array $data
+     */
+    public function register(array $data): void
+    {
+        var_dump($data);
     }
 }

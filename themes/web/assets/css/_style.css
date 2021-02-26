@@ -80,6 +80,15 @@
 #login .form .link-login:hover {
   text-decoration: underline !important;
 }
+/*--------------------*/
+/*----- REGISTER -----*/
+/*--------------------*/
+#sign-in-modal .modal-body {
+  overflow-y: auto;
+}
+#sign-in-modal .modal-body::-webkit-scrollbar {
+  display: none;
+}
 /*------------------*/
 /*----- FORGET -----*/
 /*------------------*/

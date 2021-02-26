@@ -19,7 +19,10 @@ $route->get("/", "Web::index", "web.home");
 $route->get("/entrar", "Web::login", "web.login");
 $route->get("/recuperar-senha", "Web::forget", "web.forget");
 
-// /** Error */
+/** WEB POST */
+$route->post("/register", "Web::register", "web.register");
+
+/** Error */
 $route->group('/oops');
 $route->get("/{errcode}", "Web::error", "web.error");
 

@@ -1,7 +1,6 @@
 $('.i-form').on('keyup', function () {
   var length = $(this).val().length
   var id = $(this)[0].getAttribute('id')
-  console.log($(this).val())
   if (length > 0) {
     $('[for=' + id + ']').addClass('l-form')
   } else {
