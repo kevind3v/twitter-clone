@@ -8,20 +8,20 @@
     "packages": [
         {
             "name": "brbunny/brmailer",
-            "version": "v1.0.2",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kevind3v/brmailer.git",
-                "reference": "2b51cb11623a9884b6bc91ed89c03a2734b9362c"
+                "reference": "5f7c6ff6afb1732f0e1e52ae671ef2186d64cb56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kevind3v/brmailer/zipball/2b51cb11623a9884b6bc91ed89c03a2734b9362c",
-                "reference": "2b51cb11623a9884b6bc91ed89c03a2734b9362c",
+                "url": "https://api.github.com/repos/kevind3v/brmailer/zipball/5f7c6ff6afb1732f0e1e52ae671ef2186d64cb56",
+                "reference": "5f7c6ff6afb1732f0e1e52ae671ef2186d64cb56",
                 "shasum": ""
             },
             "require": {
-                "brbunny/brplates": "^1.0",
+                "brbunny/brplates": "^1.1",
                 "ext-pdo": "*",
                 "php": "^7.2",
                 "phpmailer/phpmailer": "^6.2"
@@ -49,9 +49,9 @@
             "description": "BrMailer is a component for handling email using PHPMAILER",
             "support": {
                 "issues": "https://github.com/kevind3v/brmailer/issues",
-                "source": "https://github.com/kevind3v/brmailer/tree/v1.0.2"
+                "source": "https://github.com/kevind3v/brmailer/tree/v1.0.3"
             },
-            "time": "2021-01-21T01:36:39+00:00"
+            "time": "2021-02-27T00:38:30+00:00"
         },
         {
             "name": "brbunny/brplates",

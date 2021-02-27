@@ -45,4 +45,4 @@ $this->layout('_theme');
     </footer>
 </div>
 
-<?= $this->insert('./components/sign-in') ?>
+<?= $this->insert('components::sign-in') ?>

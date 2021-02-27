@@ -28,4 +28,4 @@ $this->layout('_theme', ["title" => "Entrar no Twitter"]);
     </form>
 </main>
 
-<?= $this->insert('./components/sign-in') ?>
+<?= $this->insert('components::sign-in') ?>

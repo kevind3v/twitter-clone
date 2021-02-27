@@ -1,18 +1,9 @@
 <?php
 
 $this->layout('_theme');
+$this->insert('components::header', ["description" => "Redefinir Senha"])
 ?>
 
-<header class="header navbar-light bg-white">
-    <nav class="navbar container">
-        <span class="navbar-brand" href="#">
-            <a href="#">
-                <img src="<?= midias('img/svg/bird.svg') ?>" width="25" height="25" class="d-inline-block align-top" alt="" />
-            </a>
-            Redefinir Senha
-        </span>
-    </nav>
-</header>
 <main id="forget" class="container mt-4">
     <div class="content">
         <form class="py-4" action="#" method="POST">

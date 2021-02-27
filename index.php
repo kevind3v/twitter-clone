@@ -21,6 +21,7 @@ $route->get("/recuperar-senha", "Web::forget", "web.forget");
 
 /** WEB POST */
 $route->post("/register", "Web::register", "web.register");
+$route->get("/confirmar", "Web::confirm", "web.confirm");
 
 /** Error */
 $route->group('/oops');
@@ -34,4 +35,5 @@ $route->dispatch();
 if ($route->error()) {
     $route->redirect("/oops/{$route->error()}");
 }
+
 ob_end_flush();

@@ -11,6 +11,7 @@ class Web extends Controller
     public function __construct($router)
     {
         parent::__construct($router, VIEWS['default'] . VIEWS['web']);
+        $this->view->path("components", VIEWS['default'] . VIEWS['web'] . "/components");
     }
 
     /** Index */
@@ -56,9 +57,22 @@ class Web extends Controller
         if (!$user->register()) {
             $json['message'] = $user->fail()->getMessage();
         } else {
-            $json['redirect'] = url();
+            $json['redirect'] = url('/confirmar');
         }
         echo json_encode($json);
         return;
+    }
+
+    public function confirm(): void
+    {
+        $this->view->show("optin", [
+            "data" => (object)[
+                "title" => "Confirmar E-mail",
+                "description" => "Falta pouco! Confirme seu cadastro :)",
+                "body" => "Enviamos um link de confirmação para seu e-mail. 
+                Acesse e siga as instruções para concluir seu cadastro.",
+                "image" => midias("img/svg/mail.svg")
+            ]
+        ]);
     }
 }

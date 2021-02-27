@@ -17,6 +17,14 @@ class Controller
 
     public function error(array $data): void
     {
-        var_dump($data);
+        $error = new \stdClass();
+        $error->code = $data['errcode'];
+        $error->title = "Desculpe, conteúdo indispinível!!";
+        $error->message = "Sentimos muito, mas o conteúdo que você tentou acessar não existe, está indisponível no momento ou foi removido :/";
+
+        echo $this->view->render("error", [
+            "title" => "Oops | {$data['errcode']}",
+            "error" => $error,
+        ]);
     }
 }

@@ -86,13 +86,12 @@ class User extends DataLayer
                 return false;
             }
 
-            $view = new BrPlates(VIEWS['shared'] . "emails");
-            $message = $view->render("confirm", [
-            "username" => $this->user,
-            "confirm_link" => url("/obrigado/" . base64_encode($this->email))
+            $mail = new BrMailer();
+            $message = $mail->template(VIEWS['shared'] . "emails")->renderTemplate("confirm", [
+                "username" => $this->user,
+                 "confirm_link" => url("/obrigado/" . base64_encode($this->email))
             ]);
-
-            (new BrMailer())->bootstrap(
+            $mail->bootstrap(
                 "Ative sua conta no" . SITE['name'],
                 $message,
                 $this->email,
