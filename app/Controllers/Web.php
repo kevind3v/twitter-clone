@@ -26,6 +26,24 @@ class Web extends Controller
         $this->view->show("login");
     }
 
+    /** Login */
+    public function loginUser(array $data): void
+    {
+        if (in_array("", $data)) {
+            $json['message'] = "Informe os campos abaixo!!";
+            echo json_encode($json);
+            return;
+        }
+        $user = new User();
+        if (!$user->login($data['user'], $data['password'])) {
+            $json['message'] = $user->fail()->getMessage();
+        } else {
+            $json['message'] = "FOi";
+        }
+        echo json_encode($json);
+        return;
+    }
+
     /**
      *  Forget
     */
@@ -72,6 +90,30 @@ class Web extends Controller
                 "body" => "Enviamos um link de confirmação para seu e-mail. 
                 Acesse e siga as instruções para concluir seu cadastro.",
                 "image" => midias("img/svg/mail.svg")
+            ]
+        ]);
+    }
+
+    public function success(array $data): void
+    {
+        $email = base64_decode($data['email']);
+        $user = (new User())->findByEmail($email);
+
+        if ($user && $user->status != "confirmed") {
+            $user->status = "confirmed";
+            $user->save();
+        } else {
+            redirect(url());
+        }
+
+        $this->view->show("optin", [
+            "data" => (object)[
+                "title" => "Conta confirmada!!",
+                "description" => "Agora você já pode fazer muitos tweets :)",
+                "body" => "Bem-vindo(a) a sua conta do twitter clone!!",
+                "image" => midias("img/svg/success.svg"),
+                "link" => url('/entrar'),
+                "linkTitle" => "Acessar Conta"
             ]
         ]);
     }

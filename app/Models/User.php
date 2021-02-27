@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Core\Session;
 use BrBunny\BrMailer\BrMailer;
 use BrBunny\BrPlates\BrPlates;
 use CoffeeCode\DataLayer\DataLayer;
@@ -57,9 +58,51 @@ class User extends DataLayer
     }
 
     /**
-     * @return bool|null
+     * @param string $email
+     * @param string $columns
+     * @return User|null
      */
-    public function register(): ?bool
+    public function findByTerms(string $terms, string $columns = "*"): ?User
+    {
+        $params = http_build_query(["user" => "{$terms}", "email" => "{$terms}"]);
+        $find = $this->find("user = :user OR email = :email", $params, $columns);
+        return $find->fetch();
+    }
+
+
+    public function login(string $user, string $password): bool
+    {
+        try {
+            if (!is_passwd($password)) {
+                throw new \Exception("Senha Invalida!!");
+                return false;
+            }
+            $data = $this->findByTerms($user);
+            if (!$data) {
+                throw new \Exception("Usuário não correspondem aos nossos registros. Verifique e tente novamente.");
+                return false;
+            }
+            if (!passwd_verify($password, $data->password)) {
+                throw new \Exception("Senha informada está incorreta");
+                return false;
+            }
+            if (passwd_rehash($data->password)) {
+                $data->password = $password;
+                $data->save();
+            }
+
+            (new Session())->set("authUser", $data->id);
+            return true;
+        } catch (\Exception $exception) {
+            $this->fail = $exception;
+            return false;
+        }
+    }
+
+    /**
+     * @return bool
+     */
+    public function register(): bool
     {
         try {
             if (!is_email($this->email)) {

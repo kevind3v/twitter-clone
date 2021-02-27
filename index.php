@@ -20,8 +20,10 @@ $route->get("/entrar", "Web::login", "web.login");
 $route->get("/recuperar-senha", "Web::forget", "web.forget");
 
 /** WEB POST */
+$route->post("/entrar", "Web::loginUser", "web.loginUser");
 $route->post("/register", "Web::register", "web.register");
 $route->get("/confirmar", "Web::confirm", "web.confirm");
+$route->get("/obrigado/{email}", "Web::success", "web.success");
 
 /** Error */
 $route->group('/oops');

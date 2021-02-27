@@ -12,8 +12,13 @@ $this->insert('components::header', ["description" => $data->title])
 
             <h1><?= $data->description; ?></h1>
             <p><?= $data->body; ?></p>
-            <a class="btn outlined mt-4"
+            <?php if (!empty($data->link)) : ?>
+                <a href="<?= $data->link; ?>" title="<?= $data->linkTitle ?>"
+               class="btn outlined optin_btn mt-4"><?= $data->linkTitle ?></a>
+            <?php else : ?>
+                <a class="btn optin_btn outlined mt-4"
                title="Continue navegando" href="<?= url() ?>">Continue navegando</a>
+            <?php endif ?>
         </div>
     </div>
 </article>

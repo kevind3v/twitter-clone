@@ -4,7 +4,7 @@ $this->layout('_theme', ["title" => "Entrar no Twitter"]);
 ?>
 
 <main id="login" class="container pt-4">
-    <form action="#" method="POST" id="login">
+    <form action="<?= $router->route('web.loginUser') ?>" method="POST" id="login">
         <div class="form m-auto px-md-4">
             <i class="fab fa-twitter"></i>
             <h3>Entrar no Twitter</h3>
@@ -12,11 +12,11 @@ $this->layout('_theme', ["title" => "Entrar no Twitter"]);
             <p class="ajax_response"></p>
 
             <div class="form-group">
-                <input required id="user" class="form-control i-form" type="text" />
+                <input required id="user" name="user" class="form-control i-form" type="text" />
                 <label for="user">E-mail ou nome de usuário</label>
             </div>
             <div class="form-group">
-                <input required autocomplete="off" id="passwd" class="form-control i-form" type="password" />
+                <input  autocomplete="off" name="password" id="passwd" class="form-control i-form" type="password" />
                 <label for="passwd">Senha</label>
             </div>
             <button class="btn btn-block" type="submit">Conecte-se</button>

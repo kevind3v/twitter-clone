@@ -188,7 +188,7 @@
 }
 
 .optin_page_content img {
-  width: 400px;
+  width: 350px;
   max-width: 100%;
 }
 
@@ -204,12 +204,7 @@
   color: var(--gray);
 }
 
-.optin_page_btn {
+.optin_btn {
   display: inline-block;
-  padding: 20px 40px;
-  margin-top: 20px;
-  color: #ffffff;
-  font-weight: var(--weight-bold);
-  text-decoration: none;
-  font-size: 1.4em;
+  padding: 15px 80px;
 }
