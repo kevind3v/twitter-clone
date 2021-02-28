@@ -6,6 +6,7 @@ CREATE TABLE `users` (
   `user` varchar(255) NOT NULL DEFAULT '',
   `email` varchar(255) NOT NULL DEFAULT '',
   `password` varchar(255) NOT NULL DEFAULT '',
+  `bio` text DEFAULT NULL,
   `forget` varchar(255) DEFAULT NULL,
   `datebirth` date DEFAULT NULL,
   `photo` varchar(255) DEFAULT NULL,

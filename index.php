@@ -14,16 +14,21 @@ require __DIR__ . "/vendor/autoload.php";
 $route = new CoffeeCode\Router\Router(url(), "::");
 $route->namespace("App\Controllers");
 
+/** WEB */
 $route->group(null);
 $route->get("/", "Web::index", "web.home");
 $route->get("/entrar", "Web::login", "web.login");
 $route->get("/recuperar-senha", "Web::forget", "web.forget");
-
 /** WEB POST */
 $route->post("/entrar", "Web::loginUser", "web.loginUser");
 $route->post("/register", "Web::register", "web.register");
 $route->get("/confirmar", "Web::confirm", "web.confirm");
 $route->get("/obrigado/{email}", "Web::success", "web.success");
+
+/** APP */
+$route->group(null);
+$route->get("/home", "App::home", "app.home");
+$route->get("/u/{user}", "App::profile", "app.profile");
 
 /** Error */
 $route->group('/oops');

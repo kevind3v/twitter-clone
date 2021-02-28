@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Core\Controller;
+use App\Core\Session;
+use App\Models\Auth;
 use App\Models\User;
 
 class Web extends Controller
@@ -12,6 +14,9 @@ class Web extends Controller
     {
         parent::__construct($router, VIEWS['default'] . VIEWS['web']);
         $this->view->path("components", VIEWS['default'] . VIEWS['web'] . "/components");
+        if (Auth::user()) {
+            redirect("/home");
+        }
     }
 
     /** Index */
@@ -34,11 +39,11 @@ class Web extends Controller
             echo json_encode($json);
             return;
         }
-        $user = new User();
-        if (!$user->login($data['user'], $data['password'])) {
-            $json['message'] = $user->fail()->getMessage();
+        $auth = new Auth();
+        if (!$auth->login($data['user'], $data['password'])) {
+            $json['message'] = $auth->fail()->getMessage();
         } else {
-            $json['message'] = "FOi";
+            $json['redirect'] = url("home");
         }
         echo json_encode($json);
         return;
@@ -65,6 +70,7 @@ class Web extends Controller
             echo json_encode($json);
             return;
         }
+        $auth = new Auth();
         $user = new User();
         $user->bootstrap(
             $data['name'],
@@ -72,8 +78,8 @@ class Web extends Controller
             $data['email'],
             $data['password']
         );
-        if (!$user->register()) {
-            $json['message'] = $user->fail()->getMessage();
+        if (!$auth->register($user)) {
+            $json['message'] = $auth->fail()->getMessage();
         } else {
             $json['redirect'] = url('/confirmar');
         }

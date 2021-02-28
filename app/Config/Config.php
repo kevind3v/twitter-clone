@@ -73,5 +73,6 @@ define("PASSWD", [
 define('VIEWS', [
     "shared" => dirname(__DIR__, 2) . "/shared/views/",
     "default" => dirname(__DIR__, 2) . "/themes/",
-    "web" => "web"
+    "web" => "web",
+    "app" => "app"
 ]);
