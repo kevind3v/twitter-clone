@@ -42,6 +42,7 @@ $(() => {
         var base64 = reader.result;
         $('#profile_avatar').attr('src', base64);
         $('#user_avatar').attr('value', base64);
+        $('#avatar').val('');
         cropperAvatar.modal('hide');
       };
     });
