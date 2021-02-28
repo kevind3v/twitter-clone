@@ -35,7 +35,7 @@ class App extends Controller
         if (!$user) {
             $this->view->show("not-user", [
                 "auth" => false,
-                "user" => $data
+                "user" => !empty($data) ? $data : null
             ]);
             return;
         }

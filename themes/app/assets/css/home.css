@@ -11,9 +11,6 @@ main#feed .content .tweet-box .avatar {
   height: 48px;
   flex-shrink: 0;
   border-radius: 50%;
-  background: url('../../../assets/img/profile.png');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 main#feed .content .tweet-box .tweet-box-content {
   width: 100%;
