@@ -198,9 +198,13 @@ hr {
 .form textarea:focus + label,
 .form input:focus + label,
 .form textarea + .l-form,
-.form input + .l-form {
+.form input + .l-form,
+.form .i-form:not(:placeholder-shown) + label {
   top: 5px;
   font-size: 12px;
+}
+.form .i-form::placeholder {
+  opacity: 0;
 }
 .modal {
   background-color: var(--twitter-modal);

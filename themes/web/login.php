@@ -12,11 +12,11 @@ $this->layout('_theme', ["title" => "Entrar no Twitter"]);
             <p class="ajax_response"></p>
 
             <div class="form-group">
-                <input required id="user" name="user" class="form-control i-form" type="text" />
+                <input required id="user" placeholder="Usuário" name="user" class="form-control i-form" type="text" />
                 <label for="user">E-mail ou nome de usuário</label>
             </div>
             <div class="form-group">
-                <input  autocomplete="off" name="password" id="passwd" class="form-control i-form" type="password" />
+                <input  autocomplete="off" placeholder="Senha" name="password" id="passwd" class="form-control i-form" type="password" />
                 <label for="passwd">Senha</label>
             </div>
             <button class="btn btn-block" type="submit">Conecte-se</button>

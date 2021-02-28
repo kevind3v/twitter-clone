@@ -101,16 +101,16 @@ $this->layout('_theme', [
                             <input type="hidden" value="" name="avatar" id="user_avatar">
                         </div>
                         <div class="form-group">
-                            <input id="name" class="form-control i-form" type="text" />
+                            <input id="name" placeholder="Nome" class="form-control i-form" value="<?= $user->name ?>" type="text" />
                             <label for="name">Nome</label>
                         </div>
                         <div class="form-group">
-                            <textarea maxlength="160" id="bio" rows="4" class="form-control i-form"></textarea>
+                            <textarea maxlength="160" placeholder="Bio" id="bio" rows="4" class="form-control i-form"></textarea>
                             <label class="bio" for="bio">Bio</label>
                             <span class="count count-bio"><span>0</span>/160</span>
                         </div>
                         <div class="form-group">
-                            <input id="location" class="form-control i-form" type="text" />
+                            <input id="location" placeholder="Localização" class="form-control i-form" type="text" />
                             <label class="location" for="location">Localização</label>
                             <span class="count count-location"><span>0</span>/30</span>
                         </div>

@@ -15,22 +15,22 @@
                         </div>
                     </div>
                     <div class="form-group mt-1">
-                        <input required id="name" type="text" name="name" class="form-control i-form" />
+                        <input required placeholder="Nome" id="name" type="text" name="name" class="form-control i-form" />
                         <label for="name">Nome</label>
                     </div>
 
                     <div class="form-group">
-                        <input required id="username" type="text" name="username" class="form-control i-form" />
+                        <input required placeholder="Usuario" id="username" type="text" name="username" class="form-control i-form" />
                         <label for="username">Nome de usuário</label>
                     </div>
 
                     <div class="form-group">
-                        <input  id="email" type="email" name="email" class="form-control i-form" />
+                        <input  id="email" placeholder="Email" type="email" name="email" class="form-control i-form" />
                         <label for="email">E-mail</label>
                     </div>
 
                     <div class="form-group">
-                        <input required id="password" autocomplete="off" name="password" type="password" class="form-control i-form" />
+                        <input required placeholder="Senha" id="password" autocomplete="off" name="password" type="password" class="form-control i-form" />
                         <label for="password">Senha</label>
                     </div>
 
