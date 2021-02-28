@@ -91,6 +91,14 @@ function url(?string $path = "/"): string
 }
 
 /**
+ * @return string
+ */
+function url_back(): string
+{
+    return ($_SERVER['HTTP_REFERER'] ?? url());
+}
+
+/**
  * @param string $url
  */
 function redirect(string $url): void
@@ -181,7 +189,7 @@ function date_fmt_app(string $date): string
  * @param string $date
  * @return string
  */
-function date_str(string $date, string $format = "%d %b, %Y - %H:%M"): string
+function date_str(string $date, string $format = "%b de %Y"): string
 {
     return strftime($format, strtotime($date));
 }

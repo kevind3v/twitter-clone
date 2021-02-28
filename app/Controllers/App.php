@@ -13,6 +13,9 @@ class App extends Controller
     {
         parent::__construct($router, VIEWS['default'] . VIEWS['app']);
         $this->view->path("components", VIEWS['default'] . VIEWS['app'] . "/components");
+        if (!Auth::user()) {
+            redirect(url('/entrar'));
+        }
     }
 
     /** App Home */
@@ -49,5 +52,12 @@ class App extends Controller
             "auth" => false,
             "user" => $user->data()
         ]);
+    }
+
+    /** Logout  */
+    public function logout(): void
+    {
+        Auth::logout();
+        redirect(url());
     }
 }

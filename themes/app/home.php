@@ -1,6 +1,6 @@
 <?php
 
-$this->layout('_theme', ['title' => "Home"]);
+$this->layout('_theme', ["page" => "home", 'title' => "Home"]);
 ?>
 
 <header class="header d-flex justify-content-between pl-0">
@@ -21,10 +21,10 @@ $this->layout('_theme', ['title' => "Home"]);
             <div class="tweet-box-buttons d-flex align-items-center justify-content-between flex-wrap">
                 <div class="btn-icons d-flex flex-wrap">
                     <div class="btn-icon">
-                        <img src="../../assets/img/svg/image.svg" alt="Image" />
+                        <img src="<?= midias('img/svg/image.svg')?>" alt="Image" />
                     </div>
                     <div class="btn-icon">
-                        <img src="../../assets/img/svg/smile.svg" alt="Emoji" />
+                        <img src="<?= midias('img/svg/smile.svg')?>" alt="Emoji" />
                     </div>
                 </div>
                 <button class="btn btn-tweet">Tweet</button>

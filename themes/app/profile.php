@@ -1,16 +1,20 @@
 <?php
 
-$this->layout('_theme', ['title' => "Home", "user" => $user]);
+$this->layout('_theme', [
+    "page" => ($auth) ? "profile" : "default",
+    "title" => "{$user->name} (@{$user->user})",
+    "user" => $user
+]);
 ?>
 <header class="header d-flex justify-content-between">
-    <div class="d-flex">
-        <button>
+    <div class="d-flex align-items-center">
+        <a href="<?= url_back() ?>">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-        </button>
+        </a>
         <div class="info d-flex flex-column">
-            <strong>Kevin Siqueira</strong>
+            <strong><?= $user->name ?></strong>
             <span>625 Tweets</span>
         </div>
     </div>
@@ -40,17 +44,19 @@ $this->layout('_theme', ['title' => "Home", "user" => $user]);
         <h2>@<?= $user->user ?></h2>
 
         <?php if (!empty($user->bio)) : ?>
-        <p><?= $user->bio ?></p>
+            <p><?= $user->bio ?></p>
         <?php endif; ?>
 
         <ul>
+            <?php if (!empty($user->location)) : ?>
+                <li>
+                    <span class="material-icons-outlined"> location_on </span>
+                    Itaquaquecetuba, São Paulo - Brasil
+                </li>
+            <?php endif; ?>
             <li>
-                <span class="material-icons-outlined"> location_on </span>
-                Itaquaquecetuba, São Paulo - Brasil
-            </li>
-            <li>
-                <span class="material-icons"> cake </span>
-                Nascido(a) em 14 de maio de 2002
+                <span class="material-icons">date_range</span>
+                Entrou em <?= date_str($user->created_at) ?>
             </li>
         </ul>
 
@@ -78,7 +84,7 @@ $this->layout('_theme', ['title' => "Home", "user" => $user]);
                 <div class="modal-header px-3 align-items-center justify-content-between">
                     <div class="title d-flex align-items-center">
                         <button type="button" data-dismiss="modal" aria-label="Close" class="btn-modal">
-                            <img src="../../assets/img/svg/close-outline.svg" alt="" />
+                            <img src="<?= midias('img/svg/close-outline.svg') ?>" alt="" />
                         </button>
                         <strong>Editar Perfil</strong>
                     </div>
@@ -87,11 +93,15 @@ $this->layout('_theme', ['title' => "Home", "user" => $user]);
                 <div class="modal-body p-0 profile-page">
                     <div class="banner">
                         <button class="edit-photo">
-                            <img src="../../assets/img/svg/camera.svg" alt="Foto" />
+                            <img src="<?= midias('img/svg/camera.svg') ?>" alt="Foto" />
                         </button>
-                        <div class="avatar"></div>
+                        <?php if (!empty($user->photo)) : ?>
+                            <img alt="<?= $user->user ?>" class="avatar" src="<?= url($user->photo) ?>" />
+                        <?php else : ?>
+                            <img alt="<?= $user->user ?>" class="avatar" src="<?= midias('img/profile.png') ?>" />
+                        <?php endif ?>
                         <button class="edit-photo-avatar">
-                            <img src="../../assets/img/svg/camera.svg" alt="Foto" />
+                            <img src="<?= midias('img/svg/camera.svg') ?>" alt="Foto" />
                         </button>
                     </div>
                     <div class="forms">

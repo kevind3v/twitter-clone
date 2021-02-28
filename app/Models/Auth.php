@@ -13,6 +13,7 @@ class Auth extends DataLayer
         parent::__construct("users", ["name", "user", "email", "password"]);
     }
 
+    /** Get User Data */
     public static function user(): ?User
     {
         $session = new Session();
@@ -23,6 +24,18 @@ class Auth extends DataLayer
         return (new User())->findById($session->authUser);
     }
 
+    /** Logout */
+    public static function logout(): void
+    {
+        $session = new Session();
+        $session->unset("authUser");
+    }
+
+    /**
+     * @param string $user
+     * @param string $password
+     * @return bool
+     */
     public function login(string $user, string $password): bool
     {
         try {

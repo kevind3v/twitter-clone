@@ -29,6 +29,7 @@ $route->get("/obrigado/{email}", "Web::success", "web.success");
 $route->group(null);
 $route->get("/home", "App::home", "app.home");
 $route->get("/u/{user}", "App::profile", "app.profile");
+$route->get("/logout", "App::logout", "app.logout");
 
 /** Error */
 $route->group('/oops');

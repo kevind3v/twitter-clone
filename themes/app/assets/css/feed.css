@@ -8,9 +8,11 @@ main#feed .content .header {
   padding: 8px 0 9px 13px;
   border-bottom: 1px solid var(--outline);
 }
-main#feed .content .header button {
-  width: 48px;
+main#feed .content .header a {
+  width: 40px;
+  height: 40px;
   padding: 8px;
+  text-decoration: none;
   border-radius: 50%;
   outline: 0;
   cursor: pointer;
@@ -18,12 +20,13 @@ main#feed .content .header button {
   background: transparent;
   border: 0;
 }
-main#feed .content .header button svg {
-  width: 24px;
-  height: 24px;
+main#feed .content .header a svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 2px;
   stroke: var(--twitter);
 }
-main#feed .content .header button:hover {
+main#feed .content .header a:hover {
   background: var(--twitter-dark-hover);
 }
 main#feed .content .header .dark-mode {

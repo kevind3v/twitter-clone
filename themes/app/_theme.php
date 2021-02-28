@@ -32,7 +32,7 @@ use App\Models\Auth;
 
     <main id="feed" class="container-fluid px-0">
         <div class="d-flex wrapper justify-content-center">
-            <?= $this->insert('components::menubar', ["home" => "active", "user" => Auth::user()->data()]) ?>
+            <?= $this->insert('components::menubar', [$page ?? "default" => "active", "user" => Auth::user()->data()]) ?>
             <section class="content d-flex flex-column">
                 <?= $this->section('content') ?>
                 <?= $this->insert('components::bottom-menu') ?>
