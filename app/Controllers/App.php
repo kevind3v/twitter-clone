@@ -35,12 +35,12 @@ class App extends Controller
         if (!$user) {
             $this->view->show("not-user", [
                 "auth" => false,
-                "user" => !empty($data) ? $data : null
+                "user" => $data
             ]);
             return;
         }
 
-        if ($user->user == Auth::user()->data()->user) {
+        if ($user->user === Auth::user()->data()->user) {
             $this->view->show("profile", [
                 "auth" => true,
                 "user" => Auth::user()->data()

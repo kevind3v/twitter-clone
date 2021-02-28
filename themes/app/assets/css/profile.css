@@ -142,32 +142,25 @@ main#feed .content .profile-page .profile-data .followage span + span {
 .app-modal .modal-body .forms .count span {
   color: var(--gray);
 }
-
-.app-modal .modal-body .banner .edit-photo,
-.app-modal .modal-body .banner .edit-photo-avatar {
-  position: absolute;
-  background: transparent;
-  border: none;
-  padding: 8px;
-  border-radius: 50%;
+.app-modal .modal-body .file-image {
+  display: none;
 }
-.app-modal .modal-body .banner .edit-photo {
+.app-modal .modal-body .edit-photo {
+  position: initial !important;
+  cursor: pointer;
+}
+.image_avatar {
+  display: block;
+  max-width: 100%;
+}
+/* .app-modal .modal-body .banner .edit-photo {
   top: 15px;
   left: 15px;
-}
-.app-modal .modal-body .banner .edit-photo-avatar {
-  bottom: -45px;
-  right: 15px;
-}
-.app-modal .modal-body .banner .edit-photo:hover,
-.app-modal .modal-body .banner .edit-photo-avatar:hover {
+} */
+
+/* .app-modal .modal-body .banner .edit-photo:hover {
   background: var(--twitter-modal);
-}
-.app-modal .modal-body .banner .edit-photo img,
-.app-modal .modal-body .banner .edit-photo-avatar img {
-  width: 25px;
-  height: 25px;
-}
+} */
 /*----------------*/
 /*----- TABS -----*/
 /*----------------*/

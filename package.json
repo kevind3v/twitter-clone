@@ -8,6 +8,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.1",
     "bootstrap": "^4.5.0",
+    "cropperjs": "^1.5.9",
     "jquery": "^3.5.1",
     "jquery-form": "^4.3.0",
     "normalize.css": "^8.0.1",

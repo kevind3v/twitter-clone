@@ -15,11 +15,8 @@ $this->layout('_theme', ["page" => "home", 'title' => "Home"]);
 
 <article class="tweet-box d-flex">
     <a href="<?= $router->route('app.profile', ['user' => $user->user]) ?>" >
-        <?php if (!empty($user->photo)) : ?>
-            <img alt="<?= $user->user ?>" class="avatar" src="<?= url($user->photo) ?>" />
-        <?php else : ?>
-            <img alt="<?= $user->user ?>" class="avatar" src="<?= midias('img/profile.png') ?>" />
-        <?php endif ?>
+        <img alt="<?= $user->user ?>" class="avatar" 
+        src="<?= (!empty($user->photo)) ? url($user->photo) : midias('img/profile.png') ?>" />
     </a>
     <div class="tweet-box-content">
         <form action="#">

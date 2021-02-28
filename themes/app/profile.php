@@ -23,11 +23,8 @@ $this->layout('_theme', [
 
 <article class="profile-page d-flex flex-column">
     <div class="banner">
-        <?php if (!empty($user->photo)) : ?>
-            <img alt="<?= $user->user ?>" class="avatar" src="<?= url($user->photo) ?>" />
-        <?php else : ?>
-            <img alt="<?= $user->user ?>" class="avatar" src="<?= midias('img/profile.png') ?>" />
-        <?php endif ?>
+        <img alt="<?= $user->user ?>" class="avatar" 
+        src="<?= (!empty($user->photo)) ? url($user->photo) : midias('img/profile.png') ?>" />
     </div>
     <div class="profile-data d-flex flex-column">
         <?php if ($auth) : ?>
@@ -92,19 +89,17 @@ $this->layout('_theme', [
                 </div>
                 <div class="modal-body p-0 profile-page">
                     <div class="banner">
-                        <button class="edit-photo">
-                            <img src="<?= midias('img/svg/camera.svg') ?>" alt="Foto" />
-                        </button>
-                        <?php if (!empty($user->photo)) : ?>
-                            <img alt="<?= $user->user ?>" class="avatar" src="<?= url($user->photo) ?>" />
-                        <?php else : ?>
-                            <img alt="<?= $user->user ?>" class="avatar" src="<?= midias('img/profile.png') ?>" />
-                        <?php endif ?>
-                        <button class="edit-photo-avatar">
-                            <img src="<?= midias('img/svg/camera.svg') ?>" alt="Foto" />
-                        </button>
+                        <label class="edit-photo" for="avatar">
+                            <img id="profile_avatar" alt="<?= $user->user ?>" class="avatar" 
+                            src="<?= (!empty($user->photo)) ? url($user->photo) : midias('img/profile.png') ?>" 
+                            data-toggle="tooltip" data-placement="bottom" title="Mudar Foto"/>
+                        </label>
                     </div>
                     <div class="forms">
+                        <div class="form-group">
+                            <input type="file" class="file-image" id="avatar">
+                            <input type="hidden" value="" name="avatar" id="user_avatar">
+                        </div>
                         <div class="form-group">
                             <input id="name" class="form-control i-form" type="text" />
                             <label for="name">Nome</label>
@@ -120,6 +115,28 @@ $this->layout('_theme', [
                             <span class="count count-location"><span>0</span>/30</span>
                         </div>
                     </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="cropper_avatar" tabindex="-1" role="dialog" aria-labelledby="edit-profileTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered app-modal" role="document">
+        <div class="modal-content">
+            <form action="#" class="form">
+                <div class="modal-header px-3 align-items-center justify-content-between">
+                    <div class="title d-flex align-items-center">
+                        <button type="button" data-dismiss="modal" aria-label="Close" class="btn-modal">
+                            <img src="<?= midias('img/svg/back.svg') ?>" alt="" />
+                        </button>
+                        <strong>Editar Perfil</strong>
+                    </div>
+                    <button type="button" id="crop_avatar" class="btn btn-save">Aplicar</button>
+                </div>
+                <div class="modal-body p-0">
+                    <img src="" id="image_avatar">
                 </div>
             </form>
         </div>

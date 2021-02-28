@@ -39,11 +39,8 @@
         </a>
     </div>
     <div class="botside d-flex align-items-center justify-content-center">
-        <?php if (!empty($user->photo)) : ?>
-            <img alt="<?= $user->user ?>" class="avatar" src="<?= url($user->photo) ?>" />
-        <?php else : ?>
-            <img alt="<?= $user->user ?>" class="avatar" src="<?= midias('img/profile.png') ?>" />
-        <?php endif ?>
+            <img alt="<?= $user->user ?>" class="avatar" 
+            src="<?= (!empty($user->photo)) ? url($user->photo) : midias('img/profile.png') ?>" />
         <div class="profile-data">
             <strong><?= $user->name ?></strong>
             <span>@<?= $user->user ?></span>

@@ -222,7 +222,7 @@ hr {
 /*------------------------*/
 /*------ RESPONSIVE ------*/
 /*------------------------*/
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .app-modal {
     margin: 0;
     max-width: 100% !important;

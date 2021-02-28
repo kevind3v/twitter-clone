@@ -18,6 +18,7 @@ use App\Models\Auth;
     <!-- CSS -->
     <link rel="stylesheet" href="<?= package('normalize.css/normalize.css') ?>" />
     <link rel="stylesheet" href="<?= package('bootstrap/dist/css/bootstrap.min.css') ?>" />
+    <link rel="stylesheet" href="<?= package("cropperjs/dist/cropper.min.css"); ?>" />
     <link rel="stylesheet" href="<?= package('@fortawesome/fontawesome-free/css/all.min.css') ?>" />
     <link rel="stylesheet" href="<?= themes("assets/style.min.css", VIEWS['app']) ?>">
 </head>
@@ -45,6 +46,7 @@ use App\Models\Auth;
     <script src="<?= package('jquery/dist/jquery.min.js') ?>"></script>
     <script src="<?= package('bootstrap/dist/js/bootstrap.bundle.min.js') ?>"></script>
     <script src="<?= package('jquery-form/dist/jquery.form.min.js') ?>"></script>
+    <script src="<?= package("cropperjs/dist/cropper.min.js"); ?>"></script>
     <script src="<?= themes('assets/scripts.min.js', VIEWS['app']) ?>"></script>
 </body>
 
