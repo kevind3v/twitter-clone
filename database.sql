@@ -11,6 +11,7 @@ CREATE TABLE `users` (
   `forget` varchar(255) DEFAULT NULL,
   `datebirth` date DEFAULT NULL,
   `photo` varchar(255) DEFAULT NULL,
+  `banner` varchar(255) DEFAULT NULL,
   `status` varchar(50) NOT NULL DEFAULT 'registered' COMMENT 'registered, confirmed',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,

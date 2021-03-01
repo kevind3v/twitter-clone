@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Core\Controller;
 use App\Models\Auth;
 use App\Models\User;
+use BrBunny\BrUploader\Base64;
 
 class App extends Controller
 {
@@ -56,7 +57,39 @@ class App extends Controller
 
     public function editProfile(array $data): void
     {
-        var_dump($data);
+        if (empty($data['name'])) {
+            $json['message'] = "Nome é obrigatório";
+            echo json_encode($json);
+            return;
+        }
+        try {
+            $user = (new User())->findById(Auth::user()->data()->id);
+            $user->name = $data['name'];
+            $user->bio = $data['bio'];
+            $user->location = $data['location'];
+            if (!empty($data['avatar'])) {
+                $image = (new Base64("uploads", "images"))
+                ->upload($data['avatar'], $user->user);
+                Base64::remove($user->photo ?? "");
+                $user->photo = $image;
+            }
+            if (!empty($data['banner'])) {
+                $image = (new Base64("uploads", "images"))
+                ->upload($data['banner'], $user->user . "-banner");
+                Base64::remove($user->banner ?? "");
+                $user->banner = $image;
+            }
+
+            if ($user->save()) {
+                $json['error'] = false;
+                echo json_encode($json);
+                return;
+            }
+        } catch (\Exception $e) {
+            $json['message'] = $e->getMessage();
+            echo json_encode($json);
+            return;
+        }
     }
 
     /** Logout  */

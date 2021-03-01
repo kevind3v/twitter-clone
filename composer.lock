@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "507edd6e164f2bd97af9b14921b6eb93",
+    "content-hash": "0526974d3360e8ede06a2c53b2c36281",
     "packages": [
         {
             "name": "brbunny/brmailer",
@@ -98,6 +98,52 @@
                 "source": "https://github.com/kevind3v/brplates/tree/v1.1.1"
             },
             "time": "2021-02-19T22:51:18+00:00"
+        },
+        {
+            "name": "brbunny/bruploader",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kevind3v/bruploader.git",
+                "reference": "6127065d5c358f7c362c46eff0ee47624c86bdcb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kevind3v/bruploader/zipball/6127065d5c358f7c362c46eff0ee47624c86bdcb",
+                "reference": "6127065d5c358f7c362c46eff0ee47624c86bdcb",
+                "shasum": ""
+            },
+            "require": {
+                "coffeecode/uploader": "1.0.*",
+                "ext-pdo": "*",
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "BrBunny\\BrUploader\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kevin Santos",
+                    "email": "kevinsiqueira.dev@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "It is a base64 upload manager for PHP with ease and security",
+            "support": {
+                "issues": "https://github.com/kevind3v/bruploader/issues",
+                "source": "https://github.com/kevind3v/bruploader/tree/v1.0.0"
+            },
+            "time": "2021-02-07T01:23:27+00:00"
         },
         {
             "name": "coffeecode/datalayer",
@@ -200,6 +246,64 @@
                 "source": "https://github.com/robsonvleite/router/tree/master"
             },
             "time": "2019-09-30T16:29:47+00:00"
+        },
+        {
+            "name": "coffeecode/uploader",
+            "version": "1.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robsonvleite/uploader.git",
+                "reference": "1fd58f13d41de26be36bef9fcebe54b865f3380e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robsonvleite/uploader/zipball/1fd58f13d41de26be36bef9fcebe54b865f3380e",
+                "reference": "1fd58f13d41de26be36bef9fcebe54b865f3380e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-exif": "*",
+                "ext-gd": "*",
+                "ext-mbstring": "*",
+                "php": "^7.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CoffeeCode\\Uploader\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Robson V. Leite",
+                    "email": "cursos@upinside.com.br",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Tiago Chini",
+                    "email": "tiago.chini@hotmail.com",
+                    "role": "collaborator"
+                }
+            ],
+            "description": "It is a easy PHP upload manager for images, files and media in your application",
+            "homepage": "http://www.upinside.com.br",
+            "keywords": [
+                "Coffeecode",
+                "Image upload",
+                "file upload",
+                "media upload",
+                "upinside",
+                "upload"
+            ],
+            "support": {
+                "issues": "https://github.com/robsonvleite/uploader/issues",
+                "source": "https://github.com/robsonvleite/uploader/tree/master"
+            },
+            "time": "2020-06-23T13:22:03+00:00"
         },
         {
             "name": "graham-campbell/result-type",

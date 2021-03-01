@@ -25,6 +25,8 @@ main#feed .content {
   width: 100%;
   height: min(33vw, 199px);
   background: var(--outline);
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
 }
 .profile-page .banner .avatar {
@@ -175,14 +177,6 @@ main#feed .content .profile-page .profile-data .followage span + span {
   width: 25px;
   height: 25px;
 }
-/* .app-modal .modal-body .banner .edit-photo {
-  top: 15px;
-  left: 15px;
-} */
-
-/* .app-modal .modal-body .banner .edit-photo:hover {
-  background: var(--twitter-modal);
-} */
 /*----------------*/
 /*----- TABS -----*/
 /*----------------*/

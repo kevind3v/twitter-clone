@@ -17,7 +17,7 @@ $('.textarea')
     this.style.height = this.scrollHeight + 'px';
   });
 
-$('#bio').on('keyup', function () {
+$('#bio').on('keyup click', function () {
   var length = $(this).val().length;
   $('.forms .count-bio span').html(length);
   if (length >= 160) {
@@ -25,7 +25,7 @@ $('#bio').on('keyup', function () {
   }
 });
 
-$('#location').on('keyup', function () {
+$('#location').on('keyup click', function () {
   var length = $(this).val().length;
   $('.forms .count-location span').html(length);
   if (length >= 30) {

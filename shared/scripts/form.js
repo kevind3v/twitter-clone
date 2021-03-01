@@ -22,7 +22,7 @@ $(function () {
           if (response.message) {
             flash.html(response.message).fadeIn(100);
           } else {
-            flash.fadeOut(100);
+            flash.html('').fadeOut(100);
             window.location.reload();
           }
         }
