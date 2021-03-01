@@ -39,8 +39,7 @@ class User extends DataLayer
      */
     public function findByEmail(string $email, string $columns = "*"): ?User
     {
-        $find = $this->find("email = :email", "email={$email}", $columns);
-        return $find->fetch();
+        return $this->find("email = :email", "email={$email}", $columns)->fetch();
     }
 
     /**
@@ -50,8 +49,7 @@ class User extends DataLayer
      */
     public function findByUser(string $user, string $columns = "*"): ?User
     {
-        $find = $this->find("user = :user", "user={$user}", $columns);
-        return $find->fetch();
+        return $this->find("user = :user", "user={$user}", $columns)->fetch();
     }
 
     /**
@@ -62,7 +60,11 @@ class User extends DataLayer
     public function findByTerms(string $terms, string $columns = "*"): ?User
     {
         $params = http_build_query(["user" => "{$terms}", "email" => "{$terms}"]);
-        $find = $this->find("user = :user OR email = :email", $params, $columns);
-        return $find->fetch();
+        return $this->find("user = :user OR email = :email", $params, $columns)->fetch();
+    }
+
+    public function users(int $id)
+    {
+        return $this->find("id != :id", $id)->fetch(true);
     }
 }

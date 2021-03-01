@@ -22,10 +22,8 @@ class App extends Controller
     /** App Home */
     public function home(): void
     {
-        // var_dump(Auth::user());
-        // echo "<a href='" . url("/app/sair") . "'>Sair</a>";
         $this->view->show("home", [
-            "user" => Auth::user()->data()
+            "user" => Auth::user()->data(),
         ]);
     }
 

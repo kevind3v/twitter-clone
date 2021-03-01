@@ -71,15 +71,35 @@ section.sidebar .body .list {
 }
 section.sidebar .body .list .item {
   padding: 10px 16px;
+  transition: background 0.4s;
+}
+section.sidebar .body .list .item + .item:hover {
+  background: var(--outline);
+}
+section.sidebar .body .list .item .link {
+  text-decoration: none;
 }
 section.sidebar .body .list .item + .item {
   border-top: 1px solid var(--outline);
+  cursor: pointer;
+  text-decoration: none;
 }
 section.sidebar .body .list .item:first-child {
   padding-top: 13px;
 }
 section.sidebar .body .list .item:last-child {
+  border-radius: 0 0 14px 14px;
+}
+section.sidebar .body .list .item:last-child:not(.more) {
   padding-bottom: 17px;
+}
+section.sidebar .body .list .item.more {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+section.sidebar .body .list .item.more span {
+  font-size: 15px;
+  color: var(--twitter);
 }
 section.sidebar .body .list .item .title {
   font-weight: bold;

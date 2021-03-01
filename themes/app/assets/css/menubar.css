@@ -40,7 +40,7 @@ section.menubar .topside .menu-button {
   align-items: center;
   flex-shrink: 0;
   text-decoration: none;
-  padding: 8.25px 0;
+  padding: 8.25px;
   outline: 0;
   background: transparent;
   border: none;
@@ -187,11 +187,9 @@ section.menubar .botside .exit:hover > svg {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     position: sticky;
     top: 0;
     left: 0;
-
     padding: 9px 19px 20px;
     max-height: 100vh;
     overflow-y: auto;

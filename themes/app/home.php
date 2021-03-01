@@ -4,9 +4,9 @@ $this->layout('_theme', ["page" => "home", 'title' => "Home"]);
 ?>
 
 <header class="header d-flex justify-content-between pl-0">
-    <div class="info d-flex flex-wrap">
-        <a href="#" class="profile">
-            <div class="avatar"></div>
+    <div class="info d-flex flex-wrap align-items-center">
+        <a href="#" class="profile-avatar">
+            <img alt="<?= $user->user ?>" class="avatar" src="<?= (!empty($user->photo)) ? url($user->photo) : midias('img/profile.png') ?>" />
         </a>
         <strong>Home</strong>
     </div>
@@ -14,9 +14,8 @@ $this->layout('_theme', ["page" => "home", 'title' => "Home"]);
 </header>
 
 <article class="tweet-box d-flex">
-    <a href="<?= $router->route('app.profile', ['user' => $user->user]) ?>" >
-        <img alt="<?= $user->user ?>" class="avatar" 
-        src="<?= (!empty($user->photo)) ? url($user->photo) : midias('img/profile.png') ?>" />
+    <a href="<?= $router->route('app.profile', ['user' => $user->user]) ?>">
+        <img alt="<?= $user->user ?>" class="avatar" src="<?= (!empty($user->photo)) ? url($user->photo) : midias('img/profile.png') ?>" />
     </a>
     <div class="tweet-box-content">
         <form action="#">

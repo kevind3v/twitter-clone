@@ -8,86 +8,27 @@
     <article class="body d-flex flex-column">
         <article class="list d-flex flex-column">
             <div class="item">
-                <span class="title"> Talvez você curta</span>
+                <span class="title">Quem seguir</span>
             </div>
             <div class="item">
                 <div class="follow-suggestion d-flex align-items-center">
-                    <div class="d-flex align-items-center">
+                    <a href="#" class="d-flex align-items-center link">
                         <div class="avatar"></div>
                         <div class="info d-flex flex-column">
                             <strong>Larissa Rodrigues Miranda</strong>
                             <span>@lau</span>
                         </div>
-                    </div>
+                    </a>
                     <button class="btn outlined">Seguir</button>
                 </div>
             </div>
-            <div class="item">
+            <a href="#" class="item more">
                 <div class="follow-suggestion d-flex align-items-center">
-                    <div class="d-flex align-items-center">
-                        <div class="avatar"></div>
-                        <div class="info d-flex flex-column">
-                            <strong>Larissa Rodrigues Miranda</strong>
-                            <span>@lau</span>
-                        </div>
-                    </div>
-                    <button class="btn outlined">Seguir</button>
+                    <span>
+                      Mostre mais
+                    </span>
                 </div>
-            </div>
-        </article>
-
-        <article class="list d-flex flex-column">
-            <div class="item">
-                <span class="title"> Talvez você curta</span>
-            </div>
-            <div class="item">
-                <div class="news d-flex flex-column">
-                    <span>Titulo da noticia</span>
-                    <strong>Olha essa noticia</strong>
-                </div>
-            </div>
-            <div class="item">
-                <div class="news d-flex flex-column">
-                    <span>Titulo da noticia</span>
-                    <strong>Olha essa noticia</strong>
-                </div>
-            </div>
-            <div class="item">
-                <div class="news d-flex flex-column">
-                    <span>Titulo da noticia</span>
-                    <strong>Olha essa noticia</strong>
-                </div>
-            </div>
-            <div class="item">
-                <div class="news d-flex flex-column">
-                    <span>Titulo da noticia</span>
-                    <strong>Olha essa noticia</strong>
-                </div>
-            </div>
-            <div class="item">
-                <div class="news d-flex flex-column">
-                    <span>Titulo da noticia</span>
-                    <strong>Olha essa noticia</strong>
-                </div>
-            </div>
-            <div class="item">
-                <div class="news d-flex flex-column">
-                    <span>Titulo da noticia</span>
-                    <strong>Olha essa noticia</strong>
-                </div>
-            </div>
-            <div class="item">
-                <div class="news d-flex flex-column">
-                    <span>Titulo da noticia</span>
-                    <strong>Olha essa noticia</strong>
-                </div>
-            </div>
-            <div class="item">
-                <div class="news d-flex flex-column">
-                    <span>Titulo da noticia</span>
-                    <strong>Olha essa noticia</strong>
-                </div>
-            </div>
+            </a>
         </article>
     </article>
 </section>

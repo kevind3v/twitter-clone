@@ -8,10 +8,11 @@ main#feed .content .header {
   padding: 8px 0 9px 13px;
   border-bottom: 1px solid var(--outline);
 }
-main#feed .content .header a {
+main#feed .content .header a:not(.profile-avatar) {
   width: 40px;
   height: 40px;
   padding: 8px;
+  margin-right: 10px;
   text-decoration: none;
   border-radius: 50%;
   outline: 0;
@@ -20,13 +21,13 @@ main#feed .content .header a {
   background: transparent;
   border: 0;
 }
-main#feed .content .header a svg {
+main#feed .content .header a:not(.profile-avatar) svg {
   width: 20px;
   height: 20px;
   margin-left: 2px;
   stroke: var(--twitter);
 }
-main#feed .content .header a:hover {
+main#feed .content .header a:not(.profile-avatar):hover {
   background: var(--twitter-dark-hover);
 }
 main#feed .content .header .dark-mode {
@@ -172,7 +173,7 @@ article.tweets .tweet .body .content .image {
   margin-top: 12px;
   width: 100%;
   height: min(285px, max(175px, 41vw));
-  background: url('https://source.unsplash.com/random') var(--outline);
+  background: var(--outline);
   background-size: 100%;
   background-repeat: no-repeat;
   border-radius: 14px;
@@ -217,7 +218,7 @@ article.tweets .tweet .body .content .icons .status i {
   article.tweets {
     margin-bottom: 0;
   }
-  main#feed .content .header .info .profile {
+  main#feed .content .header .info .profile-avatar {
     display: none !important;
   }
 }
