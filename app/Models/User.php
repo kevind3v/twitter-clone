@@ -62,9 +62,4 @@ class User extends DataLayer
         $params = http_build_query(["user" => "{$terms}", "email" => "{$terms}"]);
         return $this->find("user = :user OR email = :email", $params, $columns)->fetch();
     }
-
-    public function users(int $id)
-    {
-        return $this->find("id != :id", $id)->fetch(true);
-    }
 }

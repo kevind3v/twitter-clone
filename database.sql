@@ -32,3 +32,19 @@ CREATE TABLE `tweets` (
   SET
     NULL ON UPDATE NO ACTION
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
+CREATE TABLE `follow` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `following` int(11) unsigned DEFAULT NULL,
+  `followed` int(11) unsigned DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `user_following` (`following`),
+  KEY `user_followed` (`followed`),
+  CONSTRAINT `user_following` FOREIGN KEY (`following`) REFERENCES `users` (`id`) ON DELETE
+  SET
+    NULL ON UPDATE NO ACTION,
+    CONSTRAINT `user_followed` FOREIGN KEY (`followed`) REFERENCES `users` (`id`) ON DELETE
+  SET
+    NULL ON UPDATE NO ACTION
+) ENGINE = InnoDB DEFAULT CHARSET = utf8;
