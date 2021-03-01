@@ -54,6 +54,11 @@ class App extends Controller
         ]);
     }
 
+    public function editProfile(array $data): void
+    {
+        var_dump($data);
+    }
+
     /** Logout  */
     public function logout(): void
     {

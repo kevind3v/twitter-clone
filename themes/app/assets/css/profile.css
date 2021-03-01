@@ -149,9 +149,31 @@ main#feed .content .profile-page .profile-data .followage span + span {
   position: initial !important;
   cursor: pointer;
 }
-.image_avatar {
+.image_avatar,
+.image_banner {
   display: block;
   max-width: 100%;
+}
+#profile_banner {
+  background-size: cover !important;
+}
+.app-modal .modal-body .banner .edit-photo-icon {
+  position: relative;
+  top: 0;
+  border: none;
+  background: transparent;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+}
+.app-modal .modal-body .banner .edit-photo-icon:hover {
+  background: var(--twitter-modal);
+}
+.app-modal .modal-body .banner .edit-photo-icon img {
+  width: 25px;
+  height: 25px;
 }
 /* .app-modal .modal-body .banner .edit-photo {
   top: 15px;

@@ -30,6 +30,8 @@ $route->group(null);
 $route->get("/home", "App::home", "app.home");
 $route->get("/u/{user}", "App::profile", "app.profile");
 $route->get("/logout", "App::logout", "app.logout");
+/** APP POST */
+$route->post("/editar-perfil", "App::editProfile", "app.editProfile");
 
 /** Error */
 $route->group('/oops');
