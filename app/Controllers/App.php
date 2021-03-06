@@ -22,7 +22,7 @@ class App extends Controller
     /** App Home */
     public function home(): void
     {
-        $this->view->show("home", [
+        $this->view->show("timeline", [
             "user" => Auth::user()->data(),
         ]);
     }
@@ -66,13 +66,13 @@ class App extends Controller
             $user->bio = $data['bio'];
             $user->location = $data['location'];
             if (!empty($data['avatar'])) {
-                $image = (new Base64("uploads", "images"))
-                ->upload($data['avatar'], $user->user);
+                $image = (new Base64("storage/uploads/", "avatar"))
+                ->upload($data['avatar'], $user->user . "-avatar");
                 Base64::remove($user->photo ?? "");
                 $user->photo = $image;
             }
             if (!empty($data['banner'])) {
-                $image = (new Base64("uploads", "images"))
+                $image = (new Base64("storage/uploads/", "banner"))
                 ->upload($data['banner'], $user->user . "-banner");
                 Base64::remove($user->banner ?? "");
                 $user->banner = $image;

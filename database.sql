@@ -20,8 +20,8 @@ CREATE TABLE `users` (
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
 CREATE TABLE `tweets` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `author` int(11) unsigned DEFAULT NULL,
-  `description` text NOT NULL,
+  `author` int(11) unsigned NOT NULL,
+  `description` text DEFAULT NULL,
   `cover` varchar(255) DEFAULT NULL,
   `views` int(11) NOT NULL DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
