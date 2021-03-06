@@ -1,9 +1,9 @@
-<div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="sign-in-modalTitle" aria-hidden="true">
+<section class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="sign-in-modalTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered app-modal" role="document">
-        <div class="modal-content px-3">
-            <div class="modal-header justify-content-center">
+        <article class="modal-content px-3">
+            <header class="modal-header justify-content-center">
                 <img class="mt-3" width="30" height="30" src="<?= midias('img/svg/bird.svg') ?>" alt="Twitter" />
-            </div>
+            </header>
             <div class="modal-body mb-2">
                 <form action="<?= $router->route("web.register") ?>" method="POST" class="form" id="sign-in">
                     <div class="row ">
@@ -44,6 +44,6 @@
                     <button class="btn btn-sign-in btn-block">Inscrever-se</button>
                 </form>
             </div>
-        </div>
+        </article>
     </div>
-</div>
+</section>

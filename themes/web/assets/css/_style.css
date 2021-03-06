@@ -10,51 +10,51 @@
 /*-----------------*/
 /*----- INDEX -----*/
 /*-----------------*/
-#main {
+#content {
   width: 100% !important;
   height: 100% !important;
   background: var(--primary) !important;
 }
-#main main {
+#content main {
   height: 100%;
   max-height: 100%;
 }
-#main main .banner {
+#content main .banner {
   width: 100%;
   background: url('../../../assets/img/bg-log-in.png') var(--primary);
   background-repeat: no-repeat;
   background-size: cover;
 }
-#main main .brand {
+#content main .brand {
   padding: 30px;
   height: 280px;
   max-width: 380px;
 }
-#main main .middle i,
+#content main .middle i,
 #login .form i {
   color: var(--brand);
   font-size: 50px;
   margin-bottom: 50px;
 }
-#main main .middle h1 {
+#content main .middle h1 {
   line-height: 45px;
   margin-bottom: 40px;
   font-weight: 800;
 }
-#main main .middle h4 {
+#content main .middle h4 {
   line-height: 35px;
   margin-bottom: 20px;
   font-weight: 700;
 }
-#main main .middle a.btn + a {
+#content main .middle a.btn + a {
   margin-top: 20px;
 }
-#main footer .nav-link {
+#content footer .nav-link {
   padding: 5px 15px;
   color: #aab8c2;
   font-size: 12px;
 }
-#main footer a.nav-link:hover {
+#content footer a.nav-link:hover {
   text-decoration: underline !important;
 }
 /*-----------------*/

@@ -137,11 +137,22 @@ function themes(string $path = null, string $template = VIEWS['web']): string
  * @param string $path
  * @return string
  */
-function midias(string $path)
+function midias(string $path): string
 {
     return url("themes/assets" . path($path));
 }
 
+/**
+ * @param string $path
+ * @return string
+ */
+function photo(string $path, string $alt = "img/profile.png"): string
+{
+    if (!empty($path)) {
+        return url($path);
+    }
+    return midias($alt);
+}
 
 /**
  *

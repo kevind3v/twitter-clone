@@ -16,7 +16,8 @@ $this->layout('_theme', ["title" => "Entrar no Twitter"]);
                 <label for="user">E-mail ou nome de usuário</label>
             </div>
             <div class="form-group">
-                <input  autocomplete="off" placeholder="Senha" name="password" id="passwd" class="form-control i-form" type="password" />
+                <input  autocomplete="off" placeholder="Senha" name="password" id="passwd" 
+                class="form-control i-form" type="password" />
                 <label for="passwd">Senha</label>
             </div>
             <button class="btn btn-block" type="submit">Conecte-se</button>

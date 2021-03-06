@@ -2,7 +2,7 @@
 
 $this->layout('_theme');
 ?>
-<div id="main" class="container-fluid h-100">
+<div id="content" class="container-fluid h-100">
     <main class="row">
         <div class="col-lg-4 col-xl-6 banner order-2 order-lg-1">
             <div class="row h-100 justify-content-center align-items-center">
@@ -40,7 +40,7 @@ $this->layout('_theme');
             <a class="nav-link" href="#">Developers</a>
             <a class="nav-link" href="#">Directory</a>
             <a class="nav-link" href="#">Settings</a>
-            <span class="nav-link">© 2021 Twitter, Inc</span>
+            <span class="nav-link">© <?= date('Y') ?> Twitter, Inc</span>
         </div>
     </footer>
 </div>

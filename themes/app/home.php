@@ -6,18 +6,18 @@ $this->layout('_theme', ["page" => "home", 'title' => "Home"]);
 <header class="header d-flex justify-content-between pl-0">
     <div class="info d-flex flex-wrap align-items-center">
         <a href="#" class="profile-avatar">
-            <img alt="<?= $user->user ?>" class="avatar" src="<?= (!empty($user->photo)) ? url($user->photo) : midias('img/profile.png') ?>" />
+            <img alt="<?= $user->user ?>" class="avatar" src="<?= photo($user->photo) ?>" />
         </a>
         <strong>Home</strong>
     </div>
     <?= $this->insert('components::dark-mode') ?>
 </header>
 
-<article class="tweet-box d-flex">
+<section class="tweet-box d-flex">
     <a href="<?= $router->route('app.profile', ['user' => $user->user]) ?>">
-        <img alt="<?= $user->user ?>" class="avatar" src="<?= (!empty($user->photo)) ? url($user->photo) : midias('img/profile.png') ?>" />
+        <img alt="<?= $user->user ?>" class="avatar" src="<?= photo($user->photo) ?>" />
     </a>
-    <div class="tweet-box-content">
+    <article class="tweet-box-content">
         <form action="#">
             <textarea class="textarea" name="tweet" placeholder="O que está acontecendo?"></textarea>
             <div class="tweet-box-buttons d-flex align-items-center justify-content-between flex-wrap">
@@ -32,10 +32,10 @@ $this->layout('_theme', ["page" => "home", 'title' => "Home"]);
                 <button class="btn btn-tweet">Tweet</button>
             </div>
         </form>
-    </div>
-</article>
+    </article>
+</section>
 <div class="divisor"></div>
-<article class="tweets d-flex flex-column flex-shrink-0">
+<section class="tweets d-flex flex-column flex-shrink-0">
     <?= $this->insert('components::tweet') ?>
-</article>
+</section>
 </section>

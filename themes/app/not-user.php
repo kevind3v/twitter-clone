@@ -16,16 +16,16 @@ $this->layout('_theme', ['title' => "Home", "user" => $user]);
     <?= $this->insert('components::dark-mode') ?>
 </header>
 
-<article class="profile-page d-flex flex-column">
+<main class="profile-page d-flex flex-column">
     <div class="banner">
-        <img alt="Nenhum Usuario" class="avatar" src="<?= midias("img/profile.png") ?>" />
+        <img alt="<?= "@{$user}" ?>" class="avatar" src="<?= midias("img/profile.png") ?>" />
     </div>
     <div class="profile-data">
-        <h1><?= !empty($user) ? "@{$user}" : "" ?></h1>
+        <h1><?= "@{$user}" ?></h1>
     </div>
     <hr>
     <div class="profile-data pt-3 d-flex flex-column text-center">
         <h1>Esta conta não existe</h1>
         <h2>Tente pesquisar por outro.</h2>
     </div>
-</article>
+</main>

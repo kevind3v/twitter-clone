@@ -4,7 +4,7 @@ $this->layout('_theme');
 $this->insert('components::header', ["description" => $data->title])
 ?>
 
-<article class="optin_page">
+<main class="optin_page">
     <div class="container content">
         <div class="optin_page_content">
             <img alt="<?= $data->description; ?>" title="<?= $data->description; ?>"
@@ -21,4 +21,4 @@ $this->insert('components::header', ["description" => $data->title])
             <?php endif ?>
         </div>
     </div>
-</article>
+</main>

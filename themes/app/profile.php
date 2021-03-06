@@ -1,15 +1,15 @@
 <?php
-
 $this->layout('_theme', [
     "page" => ($auth) ? "profile" : "default",
     "title" => "{$user->name} (@{$user->user})",
     "user" => $user
 ]);
 ?>
+
 <header class="header d-flex justify-content-between">
     <div class="d-flex align-items-center">
         <a href="<?= url_back() ?>">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <svg fill="none" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
         </a>
@@ -21,10 +21,10 @@ $this->layout('_theme', [
     <?= $this->insert('components::dark-mode') ?>
 </header>
 
-<article class="profile-page d-flex flex-column">
+<section class="profile-page d-flex flex-column">
     <div class="banner" 
     style="background-image: <?= (!empty($user->banner)) ? "url('" . url($user->banner) . "')" : "unset" ?>;">
-        <img alt="<?= $user->user ?>" class="avatar" src="<?= (!empty($user->photo)) ? url($user->photo) : midias('img/profile.png') ?>" />
+        <img alt="<?= $user->user ?>" class="avatar" src="<?= photo($user->photo) ?>" />
     </div>
     <div class="profile-data d-flex flex-column">
         <?php if ($auth) : ?>
@@ -62,19 +62,20 @@ $this->layout('_theme', [
             <span><strong>194</strong> seguidores</span>
         </div>
     </div>
-</article>
+</section>
 
 <div class="tabs">
     <span class="tab">Tweets</span>
 </div>
 
-<article class="tweets d-flex flex-column flex-shrink-0">
+<section class="tweets d-flex flex-column flex-shrink-0">
     <?= $this->insert('components::tweet') ?>
-</article>
+</section>
 
 
 
-<div class="modal fade" id="edit-profile" tabindex="-1" role="dialog" aria-labelledby="edit-profileTitle" aria-hidden="true">
+<section class="modal fade" id="edit-profile" tabindex="-1" role="dialog" 
+aria-labelledby="edit-profileTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered app-modal" role="document">
         <div class="modal-content">
             <form action="<?= $router->route('app.editProfile') ?>" id="edit-profile" class="form">
@@ -90,12 +91,13 @@ $this->layout('_theme', [
                 <div class="modal-body p-0 profile-page">
                     <div class="banner" id="profile_banner"
                     style="background-image: <?= (!empty($user->banner)) ? "url('" . url($user->banner) . "')" : "unset" ?>;">
-                        <label for="banner" class="edit-photo-icon" data-toggle="tooltip" data-placement="bottom" title="Foto de Capa">
+                        <label for="banner" class="edit-photo-icon" data-toggle="tooltip" data-placement="bottom" 
+                        title="Foto de Capa">
                             <img src="<?= midias('img/svg/camera.svg') ?>" alt="Foto" />
                         </label>
                         <label class="edit-photo" for="avatar">
                             <img id="profile_avatar" alt="<?= $user->user ?>" class="avatar" 
-                            src="<?= (!empty($user->photo)) ? url($user->photo) : midias('img/profile.png') ?>" 
+                            src="<?= photo($user->photo) ?>" 
                             data-toggle="tooltip" data-placement="bottom" title="Mudar Foto" />
                         </label>
                     </div>
@@ -128,10 +130,11 @@ $this->layout('_theme', [
             </form>
         </div>
     </div>
-</div>
+</section>
 
 
-<div class="modal fade" id="cropper_avatar" tabindex="-1" role="dialog" aria-labelledby="edit-profileTitle" aria-hidden="true">
+<section class="modal fade" id="cropper_avatar" tabindex="-1" 
+role="dialog" aria-labelledby="edit-profileTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered app-modal" role="document">
         <div class="modal-content">
 
@@ -150,9 +153,10 @@ $this->layout('_theme', [
 
         </div>
     </div>
-</div>
+</section>
 
-<div class="modal fade" id="cropper_banner" tabindex="-1" role="dialog" aria-labelledby="edit-profileTitle" aria-hidden="true">
+<section class="modal fade" id="cropper_banner" tabindex="-1" role="dialog" 
+aria-labelledby="edit-profileTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered app-modal" role="document">
         <div class="modal-content">
             <div class="modal-header px-3 align-items-center justify-content-between">
@@ -167,7 +171,6 @@ $this->layout('_theme', [
             <div class="modal-body p-0">
                 <img src="" id="image_banner">
             </div>
-
         </div>
     </div>
-</div>
+</section>
