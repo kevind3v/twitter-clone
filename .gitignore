@@ -4,6 +4,12 @@
 
 storage/uploads/
 
+# Remove minify
+themes/app/assets/scripts.min.js
+themes/app/assets/style.min.js
+themes/web/assets/style.min.js
+themes/web/assets/style.min.js
+
 .env
 
 ### Composer ###
