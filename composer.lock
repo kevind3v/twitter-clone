@@ -101,16 +101,16 @@
         },
         {
             "name": "brbunny/bruploader",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kevind3v/bruploader.git",
-                "reference": "6127065d5c358f7c362c46eff0ee47624c86bdcb"
+                "reference": "e0c71b0ad1ae9d4436fcfa6a34b59aa3a6a102fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kevind3v/bruploader/zipball/6127065d5c358f7c362c46eff0ee47624c86bdcb",
-                "reference": "6127065d5c358f7c362c46eff0ee47624c86bdcb",
+                "url": "https://api.github.com/repos/kevind3v/bruploader/zipball/e0c71b0ad1ae9d4436fcfa6a34b59aa3a6a102fe",
+                "reference": "e0c71b0ad1ae9d4436fcfa6a34b59aa3a6a102fe",
                 "shasum": ""
             },
             "require": {
@@ -141,9 +141,9 @@
             "description": "It is a base64 upload manager for PHP with ease and security",
             "support": {
                 "issues": "https://github.com/kevind3v/bruploader/issues",
-                "source": "https://github.com/kevind3v/bruploader/tree/v1.0.0"
+                "source": "https://github.com/kevind3v/bruploader/tree/v1.0.1"
             },
-            "time": "2021-02-07T01:23:27+00:00"
+            "time": "2021-03-01T15:48:02+00:00"
         },
         {
             "name": "coffeecode/datalayer",

@@ -20,11 +20,32 @@ $this->layout('_theme', ["page" => "home", 'title' => "Home"]);
     <article class="tweet-box-content">
         <form action="#">
             <textarea class="textarea" name="tweet" placeholder="O que está acontecendo?"></textarea>
+            <div class="preview_images row">
+                <div class="images">
+                    <span><i class="fas fa-times"></i></span>
+                </div>
+                <div class="images">
+                    <span><i class="fas fa-times"></i></span>
+                </div>
+                <div class="images">
+                    <span><i class="fas fa-times"></i></span>
+                </div>
+                <div class="images">
+                    <span><i class="fas fa-times"></i></span>
+                </div>
+                <div class="images">
+                    <span><i class="fas fa-times"></i></span>
+                </div>
+                <div class="images">
+                    <span><i class="fas fa-times"></i></span>
+                </div>
+            </div>
             <div class="tweet-box-buttons d-flex align-items-center justify-content-between flex-wrap">
                 <div class="btn-icons d-flex flex-wrap">
-                    <div class="btn-icon">
+                    <input type="file" class="d-none" name="images" multiple id="images_multiple">
+                    <label for="images_multiple" class="btn-icon">
                         <img src="<?= midias('img/svg/image.svg') ?>" alt="Image" />
-                    </div>
+                    </label>
                     <div class="btn-icon">
                         <img src="<?= midias('img/svg/smile.svg') ?>" alt="Emoji" />
                     </div>

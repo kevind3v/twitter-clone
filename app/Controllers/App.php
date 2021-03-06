@@ -77,7 +77,6 @@ class App extends Controller
                 Base64::remove($user->banner ?? "");
                 $user->banner = $image;
             }
-
             if ($user->save()) {
                 $json['error'] = false;
                 echo json_encode($json);

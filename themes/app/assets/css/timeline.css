@@ -16,6 +16,38 @@ main#feed .content .tweet-box .tweet-box-content {
   width: 100%;
   margin-left: 10px;
 }
+main#feed .content .tweet-box .preview_images {
+  width: 100%;
+  overflow-x: auto;
+}
+main#feed .content .tweet-box .preview_images .images {
+  position: relative;
+  margin: 5px;
+  width: 100px;
+  height: 100px;
+  background: url('https://source.unsplash.com/random?v=1') var(--outline);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 14px;
+  border: 1px solid var(--outline);
+}
+main#feed .content .tweet-box .preview_images .images > span {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  flex-shrink: 0;
+  text-align: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--like);
+  cursor: pointer;
+}
+main#feed .content .tweet-box .preview_images .images > span i {
+  margin-top: 4.4px;
+  color: #fff;
+  font-size: 14px;
+}
 main#feed .content .tweet-box textarea {
   margin-top: 10px;
   background: transparent;
