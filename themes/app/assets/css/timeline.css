@@ -71,10 +71,29 @@ main#feed .content .tweet-box .tweet-box-content .btn-tweet {
   padding: 10px 15px;
 }
 main#feed .content .tweet-box .tweet-box-content .btn-icons .btn-icon {
-  padding: 8px;
-  border-radius: 50%;
-  margin-left: -8px;
+  border: none;
+  outline: none;
+  padding: 0px;
+  margin: 0 5px 0 0;
+  box-shadow: none;
+  line-height: 0px;
+  width: 35px;
+  height: 35px;
+  border-radius: 10em;
+  position: relative;
   cursor: pointer;
+  background: transparent;
+  transition: all 0.1s ease-in-out;
+}
+main#feed .content .tweet-box .tweet-box-content .btn-icons .btn-icon > img {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
 }
 main#feed .content .tweet-box .tweet-box-content .btn-icons .btn-icon:hover {
   background: var(--twitter-dark-hover);

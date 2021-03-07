@@ -19,7 +19,7 @@ $this->layout('_theme', ["page" => "home", 'title' => "Home"]);
     </a>
     <article class="tweet-box-content">
         <form action="#">
-            <textarea class="textarea" name="tweet" placeholder="O que está acontecendo?"></textarea>
+            <textarea id="post-text" class="textarea" name="tweet" placeholder="O que está acontecendo?"></textarea>
             <div class="preview_images row">
                 <div class="images">
                     <span><i class="fas fa-times"></i></span>
@@ -40,15 +40,21 @@ $this->layout('_theme', ["page" => "home", 'title' => "Home"]);
                     <span><i class="fas fa-times"></i></span>
                 </div>
             </div>
+            
             <div class="tweet-box-buttons d-flex align-items-center justify-content-between flex-wrap">
                 <div class="btn-icons d-flex flex-wrap">
-                    <input type="file" class="d-none" name="images" multiple id="images_multiple">
-                    <label for="images_multiple" class="btn-icon">
-                        <img src="<?= midias('img/svg/image.svg') ?>" alt="Image" />
-                    </label>
-                    <div class="btn-icon">
-                        <img src="<?= midias('img/svg/smile.svg') ?>" alt="Emoji" />
-                    </div>
+                    <button type="button" class="btn-icon">
+                        <img src="<?= midias('img/svg/image.svg') ?>" alt="">
+                    </button>
+                    <button type="button" class="btn-icon">
+                        <img src="<?= midias('img/svg/movie.svg') ?>" alt="">
+                    </button>
+                    <button type="button" class="btn-icon emoji_picker">
+                        <img src="<?= midias('img/svg/emoji.svg') ?>" alt="">
+                    </button>
+                    <button type="button" class="btn-icon">
+                        <img src="<?= midias('img/svg/gif.svg') ?>" alt="">
+                    </button>
                 </div>
                 <button class="btn btn-tweet">Tweet</button>
             </div>

@@ -17,6 +17,20 @@ cropperjs@^1.5.9:
   resolved "https://registry.yarnpkg.com/cropperjs/-/cropperjs-1.5.11.tgz#502ae6d8ca098b124de6813601cca70015879fc0"
   integrity sha512-SJUeBBhtNBnnn+UrLKluhFRIXLJn7XFPv8QN1j49X5t+BIMwkgvDev541f96bmu8Xe0TgCx3gON22KmY/VddaA==
 
+emojione@>=2.0.1:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/emojione/-/emojione-4.5.0.tgz#cf1f5d417394988296aef72bd3ac3d480890838a"
+  integrity sha512-Tq55Y3UgPOnayFDN+Qd6QMP0rpoH10a1nhSFN27s8gXW3qymgFIHiXys2ECYYAI134BafmI3qP9ni2rZOe9BjA==
+
+emojionearea@^3.0.0:
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/emojionearea/-/emojionearea-3.4.2.tgz#0a5cc81160ce5fed5573a26273b126539155d8f7"
+  integrity sha512-u0i5hD/VqIE2PgmreT6Q2uKQkf9p8jbp2em23xB9llxHnsPxyu1RzzUwbZ/rLGfHpxvhUwYjGa9EYsuN3J+jLQ==
+  dependencies:
+    emojione ">=2.0.1"
+    jquery ">=1.8.3"
+    jquery-textcomplete ">=1.3.4"
+
 jquery-form@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/jquery-form/-/jquery-form-4.3.0.tgz#7d3961c314a1f2d15298f4af1d3943f54f4149c6"
@@ -24,10 +38,20 @@ jquery-form@^4.3.0:
   dependencies:
     jquery ">=1.7.2"
 
+jquery-textcomplete@>=1.3.4:
+  version "1.8.5"
+  resolved "https://registry.yarnpkg.com/jquery-textcomplete/-/jquery-textcomplete-1.8.5.tgz#df9724b42c3af9ece272356a7e8b55cd9cf239dd"
+  integrity sha512-WctSUxFk7GF5Tx2gHeVKrpkQ9tsV7mibBJ0AYNwEx+Zx3ZoUQgU5grkBXY3SCqpq/owMAMEvksN96DBSWT4PSg==
+
 jquery@>=1.7.2, jquery@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.1.tgz#d7b4d08e1bfdb86ad2f1a3d039ea17304717abb5"
   integrity sha512-XwIBPqcMn57FxfT+Go5pzySnm4KWkT1Tv7gjrpT1srtf8Weynl6R273VJ5GjkRb51IzMp5nbaPjJXMWeju2MKg==
+
+jquery@>=1.8.3:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.0.tgz#c72a09f15c1bdce142f49dbf1170bdf8adac2470"
+  integrity sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==
 
 normalize.css@^8.0.1:
   version "8.0.1"
