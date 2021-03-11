@@ -32,6 +32,9 @@ $route->get("/u/{user}", "App::profile", "app.profile");
 $route->get("/logout", "App::logout", "app.logout");
 /** APP POST */
 $route->post("/editar-perfil", "App::editProfile", "app.editProfile");
+/** APP REQUEST */
+$route->post("/upload_post_image", "Api::images", "api.images");
+
 
 /** Error */
 $route->group('/oops');

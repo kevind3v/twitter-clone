@@ -8,14 +8,6 @@ $('.i-form').on('keyup', function () {
     $('[for=' + id + ']').removeClass('l-form');
   }
 });
-$('.textarea')
-  .each(function () {
-    this.setAttribute('style', 'height:' + this.scrollHeight + 'px;overflow-y:hidden;');
-  })
-  .on('input', function () {
-    this.style.height = 'auto';
-    this.style.height = this.scrollHeight + 'px';
-  });
 
 $('#bio').on('keyup click', function () {
   var length = $(this).val().length;

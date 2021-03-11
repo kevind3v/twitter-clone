@@ -20,7 +20,8 @@ $this->layout('_theme', ["page" => "home", 'title' => "Home"]);
     <article class="tweet-box-content">
         <form action="#">
             <textarea id="post-text" class="textarea" name="tweet" placeholder="O que está acontecendo?"></textarea>
-            <div class="preview_images row">
+            <input d-attr="images" type="file" multiple name="images[]" />
+            <div class="preview_images row ml-0">
                 <div class="images">
                     <span><i class="fas fa-times"></i></span>
                 </div>
@@ -40,7 +41,6 @@ $this->layout('_theme', ["page" => "home", 'title' => "Home"]);
                     <span><i class="fas fa-times"></i></span>
                 </div>
             </div>
-            
             <div class="tweet-box-buttons d-flex align-items-center justify-content-between flex-wrap">
                 <div class="btn-icons d-flex flex-wrap">
                     <button type="button" class="btn-icon">
@@ -56,6 +56,7 @@ $this->layout('_theme', ["page" => "home", 'title' => "Home"]);
                         <img src="<?= midias('img/svg/gif.svg') ?>" alt="">
                     </button>
                 </div>
+                
                 <button class="btn btn-tweet">Tweet</button>
             </div>
         </form>

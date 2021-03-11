@@ -27,6 +27,9 @@ class App extends Controller
         ]);
     }
 
+    /**
+     * @param array $data
+     */
     public function profile(array $data): void
     {
         $data = filter_var($data['user'], FILTER_SANITIZE_STRIPPED);
@@ -53,6 +56,9 @@ class App extends Controller
         ]);
     }
 
+    /**
+     * @param array $data
+     */
     public function editProfile(array $data): void
     {
         if (empty($data['name'])) {

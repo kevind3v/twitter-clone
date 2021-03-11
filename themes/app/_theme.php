@@ -50,6 +50,7 @@ use App\Models\Auth;
     <script src="<?= package("cropperjs/dist/cropper.min.js"); ?>"></script>
     <script src="<?= package("emojionearea/dist/emojionearea.min.js"); ?>"></script>
     <script src="<?= themes('assets/scripts.min.js', VIEWS['app']) ?>"></script>
+
 </body>
 
 </html>

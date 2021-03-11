@@ -1,6 +1,3 @@
-function change(e) {
-  console.log(e);
-}
 $(() => {
   var cropperAvatar = $('#cropper_avatar');
   var cropperBanner = $('#cropper_banner');

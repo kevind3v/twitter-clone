@@ -55,7 +55,7 @@ main#feed .content .tweet-box textarea {
   border: none;
   height: 35px;
   min-height: 35px;
-  font-size: 20px;
+  font-size: 17px;
   outline: none;
   resize: none;
 }
@@ -85,6 +85,9 @@ main#feed .content .tweet-box .tweet-box-content .btn-icons .btn-icon {
   background: transparent;
   transition: all 0.1s ease-in-out;
 }
+main#feed .content .tweet-box .tweet-box-content .btn-icons .btn-icon:disabled > img {
+  opacity: 0.5;
+}
 main#feed .content .tweet-box .tweet-box-content .btn-icons .btn-icon > img {
   width: 22px;
   height: 22px;
@@ -106,4 +109,31 @@ main#feed .content .divisor {
   width: 100%;
   border-bottom: 1px solid var(--outline);
   background: var(--divisor);
+}
+div.emojionearea {
+  border: none !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+div.emojionearea div.emojionearea-editor {
+  border: none !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  padding: 0px;
+  resize: none;
+  font-size: 16px;
+  color: #002237;
+  line-height: 20px;
+  min-height: 40px !important;
+  max-height: unset !important;
+  white-space: normal !important;
+  max-width: 31.3em !important;
+  overflow: hidden;
+}
+div.emojionearea div.emojionearea-editor::before {
+  color: #72777c;
+  font-size: 16px;
+}
+div.emojionearea div.emojionearea-button {
+  display: none !important;
 }
